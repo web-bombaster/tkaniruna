@@ -1,0 +1,15 @@
+.search
+
+	.options-type.options-type__search
+		.options-type__current
+			//- .subtitle Тип подоконника
+			.title Везде
+			.icon
+		.options-type__variants
+			.variants-item Везде
+			.variants-item В тканях
+			.variants-item В фурнитуре
+
+	form.search-form( action="/search" method="GET")
+		input.search-field(type="search" name="search" placeholder="Везде")
+		button.btn-search(type="submit" aria-label="Найти")

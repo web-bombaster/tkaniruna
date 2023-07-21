@@ -1,0 +1,30 @@
+// Смартгрид и свои миксины
+@import '_mixins/mixins'; // свои миксины
+
+// Переменные
+@import "_vars";
+
+// Нормализация
+@import '_preloader';
+@import '_normalize';
+
+// Шрифты
+// @import "_fonts";
+
+// Стандартности
+// @import '_breadcrumbs'; // Постраничная навигация
+@import '_button'; // Кнопки
+
+// Свои общие стили
+@import "_main";
+@import "_burger";
+@import "_search";
+@import "_options";
+@import "_header";
+
+
+// Стили текущего проекта
+
+
+// Библиотеки и их кастомизация
+// @import "../libs/swiper-bundle.min";

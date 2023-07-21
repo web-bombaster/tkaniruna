@@ -1,0 +1,51 @@
+.btn {
+	display: inline-flex;
+	padding: 10px 24px;
+
+	font-family: var(--font-family);
+	@include fz-14_fw-400;
+	color: var(--grey000);
+	text-decoration: none;
+
+	background-color: var(--grey900);
+	border-radius: 6px;
+	border: none;
+
+	transition: background-color .25s, color .25s, transform .25s;
+	cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+	transform: translateY(-2px);
+}
+
+
+
+.btn:disabled {
+	opacity: 0.4;
+}
+
+.btn-arrow {
+	display: inline-block;
+
+	height: 48px;
+	width: 150px;
+	
+	color: #fff;
+
+	background-color: #2C2C2C;
+	border: none;
+
+	background-image: url('../img/arrow-white.svg');
+	background-size: 45px 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+
+	transition: .25s;
+
+	&:hover {
+		background-color: #FF7043;
+	}
+}

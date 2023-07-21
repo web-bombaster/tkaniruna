@@ -1,0 +1,90 @@
+@use "sass:math";
+
+.open-search, .btn-search {
+	background-color: transparent;
+	border: none;
+
+	width: 24px;
+	height: 24px;
+	background-image: url('./../img/icons/search.svg');
+	background-size: cover;
+
+	cursor: pointer;
+}
+
+.btn-search {
+	width: 38px;
+	height: 38px;
+	background-size: 24px 24px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 0;
+}
+
+.search {
+	min-width: 47%;
+
+	@media (max-width: 1500px) {
+		min-width: calc(70% - 70% / 3);
+	}
+
+	@media (max-width: 1200px) {
+		min-width: calc(50% - 50% / 3);
+	}
+
+	@media (max-width: $break_md) {
+
+	}
+
+	&.active {
+
+	}}
+
+.search__box {
+	width: 100%;
+	max-width: 905px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.search-form {
+	position: relative;
+	width: 100%;
+
+	padding-right: 0;
+}
+
+.search-field {
+	display: block;
+	padding: 10px 16px;
+	height: 38px;
+
+	width: 100%;
+	max-width: 100%;
+
+	background-color: var(--color-bg-page);
+	border-radius: var(--brs);
+	border: none;
+}
+
+.search-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	background-color: transparent;
+	border: none;
+
+	width: 38px;
+	height: 38px;
+	background-image: url('./../img/close.svg');
+	background-size: 18px 18px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}

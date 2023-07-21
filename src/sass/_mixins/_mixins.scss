@@ -1,0 +1,114 @@
+@use "sass:math";
+
+@mixin grey000 {
+    color: var(--grey000);
+}
+
+@mixin grey100 {
+    color: var(--grey100);
+}
+
+@mixin grey200 {
+    color: var(--grey200);
+}
+
+@mixin grey300 {
+    color: var(--grey300);
+}
+
+@mixin grey600 {
+    color: var(--grey600);
+}
+
+@mixin grey700 {
+    color: var(--grey700);
+}
+
+@mixin grey900 {
+    color: var(--grey900);
+}
+
+@mixin pix-to-rem($px) {
+    font-size: math.div($px, $font-size-default) * 1rem;
+}
+
+@mixin h2 {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+@mixin h4 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+@mixin h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@mixin h2_mob {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+@mixin h3_mob {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@mixin text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+@mixin fz-14_fw-400 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin h4_card_mob {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@mixin text_14_mob {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+@mixin text_2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+@mixin fz-14_fw-400_lh-14-24 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+@mixin fz-14_fw-500_lh-14-24 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+@mixin fz-14_fw-600_lh-14-24 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+@mixin text_mob {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+}

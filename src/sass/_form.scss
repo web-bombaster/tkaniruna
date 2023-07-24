@@ -4,14 +4,20 @@
 	display: flex;
 	flex-direction: column;
 
+	.form-columns {
+		width: 100%;
+		display: flex;
+		gap: 20px;
+	}
+
 	.input-wrapper {
 		width: 100%;
 		position: relative;
 
 		&.agreement {
+			margin-top: 15px;
 			width: 100%;
 			text-align: center;
-			padding-bottom: 25px;
 
 			.just-validate-error-label {
 				width: 100%;
@@ -22,13 +28,15 @@
 
 	input {
 		margin-bottom: 15px;
-		padding: 21px 23px;
+		padding: 15px 21px;
 		width: 100%;
 
 		font-family: 'Inter', sans-serif;
 
-		background-color: #F2F2F2;
-		border: none;
+		background-color: var(--grey000);
+		border-radius: 5px;
+		overflow: hidden;
+		border: 1px solid #C6C6C6;
 	}
 
 	textarea {
@@ -36,8 +44,12 @@
 		padding: 21px 23px;
 		width: 100%;
 		min-height: 130px;
-		background-color: #F2F2F2;
-		border: none;
+
+		background-color: var(--grey000);
+		border-radius: 5px;
+		overflow: hidden;
+		border: 1px solid #C6C6C6;
+
 		resize: vertical;
 	}
 
@@ -57,11 +69,11 @@
 	font-size: 32px;
 	font-weight: 600;
 
-	@media (max-width: $break_lg) {
+	@media (max-width: $break_1200px) {
 		font-size: 26px;
 	}
 
-	@media (max-width: $break_md) {
+	@media (max-width: $break_992px) {
 		font-size: 22px;
 	}
 }
@@ -83,6 +95,11 @@
 .agreement__label {
 	position: relative;
 	font-size: 14px;
+
+	~ .just-validate-error-label {
+		bottom: -30px;
+		right: 0;
+	}
 }
 
 .just-validate-error-label {
@@ -109,14 +126,14 @@
 	display: flex;
 	gap: 15px;
 
-	@media (max-width: $break_xs) {
+	@media (max-width: $break_480px) {
 		flex-wrap: wrap;
 	}
 
 	.input-wrapper {
 		flex-basis: calc(50% - 1/2*15px);
 
-		@media (max-width: $break_xs) {
+		@media (max-width: $break_480px) {
 			flex-basis: 100%;
 
 			&:first-child input {
@@ -143,7 +160,7 @@
 	background-color: #F2F2F2;
 
 
-	@media (max-width: $break_md) {
+	@media (max-width: $break_992px) {
 		padding: 20px;
 	}
 

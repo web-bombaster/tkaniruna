@@ -75,12 +75,18 @@
 }
 .btn__catalog-menu {
 }
+.catalog-menu__btn {
+    padding-left: 48px;
+    line-height: 1.5;
+}
+
 .search {
     display: flex;
 
     border-radius: var(--brs);
-    
     border: 1px solid var(--grey200);
+
+    height: 41px;
 }
 .options-type {
 }

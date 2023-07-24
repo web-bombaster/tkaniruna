@@ -112,3 +112,14 @@
     font-weight: 400;
     line-height: 1.4;
 }
+
+@mixin container {
+	width: 100%;
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+
+	@media screen and (max-width: $break_992px) {
+		padding: 0 1.5rem;
+	}
+}

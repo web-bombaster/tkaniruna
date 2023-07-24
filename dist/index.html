@@ -13,47 +13,81 @@
     <script src="js/scripts.min.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="header-top">
-        <div class="header-top__container container">
-          <div class="location">
-            <div class="location-select">Ростов-на-Дону</div>
-          </div>
-          <ul class="top-menu">
-            <li class="top-menu__item"><a class="top-menu__link" href="#">Доставка</a></li>
-            <li class="top-menu__item"><a class="top-menu__link" href="#">Схемы и выкройки</a></li>
-            <li class="top-menu__item"><a class="top-menu__link" href="#">Акции</a></li>
-            <li class="top-menu__item"><a class="top-menu__link" href="#">Подарочные сертификаты</a></li>
-            <li class="top-menu__item"><a class="top-menu__link" href="#">Анкета для предоставления образцов</a></li>
-            <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
-          </ul>
+    <div class="wrapper">
+      <div class="b04"><img class="b04__img" src="../../img/content/b04-bg.jpg" alt="">
+        <div class="b04__container container">
+          <div class="b04__title b-title">Фурнитура для ваших идей</div>
+          <div class="b04__descr b-descr">Вся фурнитура в одном месте. Всегда в наличии нитки, молнии, ленты, крючки для одежды и всё, что вам необходимо для комфортной работы!</div>
+          <div class="b04__btn btn">Перейти в каталог</div>
         </div>
       </div>
-      <div class="header-middle">
-        <div class="header-middle__container container"><a class="logo" href="#"><img class="logo__img" src="img/icons/logo.svg" alt="" height="28" width="104"></a>
-          <button class="btn btn__catalog-menu js-burger"><span>Каталог</span></button>
-          <div class="search">
-            <div class="options-type options-type__search">
-              <div class="options-type__current">
-                <div class="title">Везде</div>
-                <div class="icon"></div>
+      <div class="b05">
+        <div class="b05__container container">
+          <div class="b05__title b-title">Компания RUNA TEX</div>
+          <div class="b05__box b05-box">
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-01.svg" alt="">
+              <div class="b05-item__title">Масштабы</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-02.svg" alt="">
+              <div class="b05-item__title">Уникальный дизайн</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-03.svg" alt="">
+              <div class="b05-item__title">Производство</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-04.svg" alt="">
+              <div class="b05-item__title">Эксклюзивные ткани</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-05.svg" alt="">
+              <div class="b05-item__title">Гарантии</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-06.svg" alt="">
+              <div class="b05-item__title">Качество</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="b06">
+        <div class="b06__container container">
+          <div class="b06__box b06-box">
+            <div class="b06__title b-title">Нужна помощь с выбором или есть вопрос?</div>
+            <div class="b06__descr b-descr">Будем рады проконсультировать. Оставьте свой контакт, и мы свяжемся с вами</div>
+            <div class="b06__social social"><a class="social__item social-item" href="#"><img class="social-item__icon" src="img/icons/whatsapp.svg" alt="">
+                <div class="social-item__text">Написать в WhatsApp</div></a><a class="social__item social-item" href="#"><img class="social-item__icon" src="img/icons/phone-call.svg" alt="">
+                <div class="social-item__text">Позвонить</div></a></div>
+          </div>
+          <form class="form b06__form b06-form" action="#" method="post">
+            <div class="form-columns">
+              <div class="input-wrapper">
+                <input type="text" name="form_name" placeholder="Имя" minlength="3" maxlength="20">
               </div>
-              <div class="options-type__variants">
-                <div class="variants-item">Везде</div>
-                <div class="variants-item">В тканях</div>
-                <div class="variants-item">В фурнитуре</div>
+              <div class="input-wrapper">
+                <input class="form__phone" type="tel" name="form_tel" placeholder="Телефон">
               </div>
             </div>
-            <form class="search-form" action="/search" method="GET">
-              <input class="search-field" type="search" name="search" placeholder="Везде">
-              <button class="btn-search" type="submit" aria-label="Найти"></button>
-            </form>
-          </div>
-          <div class="user"><a class="user-item user__account" href="">Александр</a><a class="user-item user__favourites" href="">Избранное</a><a class="user-item user__cart" href="">Корзина</a></div>
+            <div class="input-wrapper">
+              <textarea name="message" placeholder="Вопрос или комментарий"></textarea>
+            </div>
+            <button class="form__btn btn" type="submit">Отправить</button>
+            <div class="input-wrapper agreement">
+              <label class="agreement__label" for="agreement">
+                <input class="form__agreement" id="agreement" name="agreement" type="checkbox" required="" checked="">Я принимаю условия&nbsp;<a href="#">политики конфиденцианольности</a>
+              </label>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="header-bottom"></div>
-    </header>
-    <main></main>
+      <div class="b07">
+        <div class="b07-map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af040eddaddae446ca89f5087b84af6b9d539df6a3f546a801d93cd00df64b5bf&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script></div>
+        <div class="b07-box">
+          <div class="b07__title b-title">Контакты</div>
+          <div class="b07__descr-box">
+            <div class="b07__descr b-descr">Наши склады, шоурумы и магазины расположены в Ростове-на-Дону и Москве. По любым вопросам вы можете обращаться по телефону <a href="tel:+78002503255">8 (800) 250-32-55</a></div>
+          </div>
+          <div class="b07__adr">г. Москва, Большая Переяславская, 7/1</div>
+          <div class="b07__work">пн-сб 10:00-20:00 <br> вс 11:00-19:00</div>
+          <div class="b07__inner"></div><a class="b07__btn btn" href="#">Все контакты</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -12,3 +12,22 @@ let initClassToggleItem = function(parentElement, childElement) {
         });
     };
 };
+
+// функция будет перемещать блок в указанное место при определенной ширине экрана
+
+let moving = function () {
+
+    const windowWidth = window.innerWidth; // ширина экрана
+
+    if (windowWidth <= 768) {
+        document.querySelector('.b07__inner').append(document.querySelector('.b07-map'));
+        document.querySelector('.b07__inner').append(document.querySelector('.b07__descr'));
+    } else {
+        document.querySelector('.b07').prepend(document.querySelector('.b07-map'));
+        document.querySelector('.b07__descr-box').prepend(document.querySelector('.b07__descr'));
+    };
+
+};
+
+moving();
+window.addEventListener('resize', moving);

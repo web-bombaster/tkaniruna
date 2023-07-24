@@ -4,12 +4,12 @@ $columns: 12;
 // $atom: (math.div(100%, $columns));
 $atom: math.div(100%, $columns);
 
-$break_lg: 1200px;
-$break_md: 992px;
-$break_ssm: 800px;
-$break_sm: 768px;
-$break_xs: 480px;
-$break_xxs: 330px;
+$break_1200px: 1200px;
+$break_992px: 992px;
+$break_800px: 800px;
+$break_768px: 768px;
+$break_480px: 480px;
+$break_330px: 330px;
 
 $offset: 30px;
 $offset_lg: $offset;
@@ -570,73 +570,73 @@ padding-right: #{calc(#{$val}+#{$offset_one_side})
 }
 
 @mixin lg($name, $value) {
-	@media screen and (max-width: $break_lg) {
+	@media screen and (max-width: $break_1200px) {
 		#{$name}: $value;
 	}
 }
 
 @mixin lg-block() {
-	@media screen and (max-width: $break_lg) {
+	@media screen and (max-width: $break_1200px) {
 		@content;
 	}
 }
 
 @mixin md($name, $value) {
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $break_992px) {
 		#{$name}: $value;
 	}
 }
 
 @mixin md-block() {
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $break_992px) {
 		@content;
 	}
 }
 
 @mixin ssm($name, $value) {
-	@media screen and (max-width: $break_ssm) {
+	@media screen and (max-width: $break_800px) {
 		#{$name}: $value;
 	}
 }
 
 @mixin ssm-block() {
-	@media screen and (max-width: $break_ssm) {
+	@media screen and (max-width: $break_800px) {
 		@content;
 	}
 }
 
 @mixin sm($name, $value) {
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $break_768px) {
 		#{$name}: $value;
 	}
 }
 
 @mixin sm-block() {
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $break_768px) {
 		@content;
 	}
 }
 
 @mixin xs($name, $value) {
-	@media screen and (max-width: $break_xs) {
+	@media screen and (max-width: $break_480px) {
 		#{$name}: $value;
 	}
 }
 
 @mixin xs-block() {
-	@media screen and (max-width: $break_xs) {
+	@media screen and (max-width: $break_480px) {
 		@content;
 	}
 }
 
 @mixin xxs($name, $value) {
-	@media screen and (max-width: $break_xxs) {
+	@media screen and (max-width: $break_330px) {
 		#{$name}: $value;
 	}
 }
 
 @mixin xxs-block() {
-	@media screen and (max-width: $break_xxs) {
+	@media screen and (max-width: $break_330px) {
 		@content;
 	}
 }

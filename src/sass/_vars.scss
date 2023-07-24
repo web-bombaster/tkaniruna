@@ -2,12 +2,13 @@
 
 // Брейкпоинты
 
-$break_lg: 1200px;
-$break_md: 992px;
-$break_ssm: 800px;
-$break_sm: 768px;
-$break_xs: 480px;
-$break_xxs: 330px;
+$break_1440px: 1440px;
+$break_1200px: 1200px;
+$break_992px: 992px;
+$break_800px: 800px;
+$break_768px: 768px;
+$break_480px: 480px;
+$break_330px: 330px;
 
 
 :root {
@@ -29,17 +30,17 @@ $break_xxs: 330px;
 
     // Размеры
     --mainGap: 20px;
-    @media (max-width: $break_lg) {
+    @media (max-width: $break_1200px) {
         --mainGap: 10px;
     }
 
     --indentBlocks: 4.8rem;
-    @media (max-width: $break_lg) {
+    @media (max-width: $break_1200px) {
         --indentBlocks: 4rem;
     }
 
     --containerPadding: 2rem;
-    @media screen and (max-width: $break_md) {
+    @media screen and (max-width: $break_992px) {
         --containerPadding: 1.5rem;
     }
 

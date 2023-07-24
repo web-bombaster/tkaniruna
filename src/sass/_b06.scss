@@ -1,0 +1,135 @@
+.b06 {
+    padding-top: 134px;
+    padding-bottom: 134px;
+
+    color: var(--grey000);
+
+    background-color: var(--grey900);
+    background-image: url(../img/content/b06-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: $break_768px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        text-align: center;
+    }
+
+    .b-title {
+        margin-bottom: 24px;
+        color: var(--grey000);
+
+        @media screen and (max-width: $break_768px) {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 4px;
+
+            line-height: 1.2;
+        }
+    }
+
+    .b-descr {
+        max-width: 420px;
+        color: var(--grey000);
+
+        @media screen and (max-width: $break_768px) {
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+        }
+    }
+
+    .form {
+        align-items: center;
+        flex-grow: 1;
+
+        @media screen and (max-width: $break_768px) {
+            display: none;
+        }
+    }
+
+    .form__btn {
+        display: inline-flex;
+        padding: 12px 24px;
+        width: 120px;
+
+        border: 1px solid var(--grey000);
+        background-color: transparent;
+
+    }
+}
+.b06__container {
+    display: flex;
+    gap: 60px;
+
+    @media screen and (max-width: $break_768px) {
+        justify-content: center;
+    }
+}
+.container {
+}
+.b06__box {
+}
+.b06-box {
+    @media screen and (max-width: $break_768px) {
+        width: 100%;
+    }
+}
+.b06__title {
+}
+
+.form {
+}
+.b06__form {
+}
+.b06-form {
+}
+.form-columns {
+    
+}
+.input-wrapper {
+}
+.form__phone {
+}
+.form__btn {
+}
+.btn {
+}
+.agreement {
+}
+.agreement__label {
+}
+.form__agreement {
+}
+
+.b06__social {
+}
+.social {
+    display: none;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 13px;
+    width: 100%;
+
+    @media screen and (max-width: $break_768px) {
+        display: flex;
+    }
+}
+.social__item {
+}
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    text-align: center;
+}
+.social-item__icon {
+    height: 30px;
+    width: auto;
+}
+.social-item__text {
+    font-size: 10px;
+    line-height: 1.6;
+}

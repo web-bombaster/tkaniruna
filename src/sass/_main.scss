@@ -19,6 +19,8 @@ body {
 	font-size: 10px;
 
 	text-rendering: auto;
+
+	background-color: #dedede;
 }
 
 body {
@@ -41,10 +43,19 @@ body {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 
+	
+
 	&.toggle {
 		height: 100vh;
 		overflow-y: hidden;
 	}
+}
+
+.wrapper {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: var(--grey000);
 }
 
 .visually-hidden {
@@ -53,14 +64,28 @@ body {
 }
 
 .container {
-	width: 100%;
-	max-width: 120rem;
-	margin: 0 auto;
-	padding: 0 2rem;
+	@include container;
+}
 
-	@media screen and (max-width: $break_md) {
-		padding: 0 1.5rem;
+.b-title {
+	max-width: 524px;
+    @include h2;
+	@include grey900;
+
+	@media screen and (max-width: $break_992px) {
+		font-size: 36px;
 	}
+
+	@media screen and (max-width: $break_768px) {
+		max-width: none;
+		text-align: center;
+		@include h2_mob;
+	}
+}
+
+.b-descr {
+    @include text;
+    color: #545454;
 }
 
 a {
@@ -132,11 +157,11 @@ ul:not([class]) {
 	font-weight: 600;
 	text-transform: uppercase;
 
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $break_992px) {
 		font-size: 2.6rem;
 	}
 
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $break_768px) {
 		font-size: 2.2rem;
 	}
 }
@@ -148,11 +173,11 @@ ul:not([class]) {
 	line-height: 1.16;
 	font-weight: 600;
 
-	@media screen and (max-width: $break_lg) {
+	@media screen and (max-width: $break_1200px) {
 		font-size: 2rem;
 	}
 
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $break_992px) {
 		font-size: 1.8rem;
 	}
 }
@@ -170,7 +195,7 @@ h3:not([class]) {
 }
 
 .hidden-text {
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $break_768px) {
 		display: none;
 
 		&.active {
@@ -196,7 +221,7 @@ h3:not([class]) {
 	border: none;
 	background-color: transparent;
 
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $break_768px) {
 		display: inline-block;
 	}
 }
@@ -219,7 +244,7 @@ h3:not([class]) {
 	z-index: 1;
 	cursor: pointer;
 
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $break_768px) {
 		height: 3.2rem;
 		width: 3.2rem;
 	}

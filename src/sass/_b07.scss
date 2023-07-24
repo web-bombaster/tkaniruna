@@ -1,0 +1,130 @@
+.b07 {
+    position: relative;
+
+    padding-top: 42px;
+    padding-bottom: 73px;
+
+    @media screen and (max-width: $break_768px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+.b07-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // left: -32px;
+    // right: -32px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    
+    @media screen and (max-width: $break_1200px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $break_768px) {
+        position: relative;
+        // left: -32px;
+        left: 0;
+        // width: calc(100% + 2*32px);
+        width: 100%;
+        margin-bottom: 32px;
+        // margin-left: -32px;
+        // margin-right: -32px;
+        height: 320px;
+
+    }
+}
+.b07__container {
+
+}
+.container {
+}
+.b07-box {
+    position: relative;
+    z-index: 2;
+
+    left: calc(50% - 120rem / 2 - 2rem);
+
+    padding: 42px;
+    max-width: 392px;
+    width: 100%;
+
+    background-color: var(--grey000);
+    border-radius: var(--brs);
+    overflow: hidden;
+
+    @media screen and (max-width: $break_1200px) {
+        left: 15px;
+    }
+
+    @media screen and (max-width: $break_768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 32px;
+        max-width: 100%;
+        left: 0;
+    }
+}
+.b07__title {
+    margin-bottom: 10px;
+}
+.b-title {
+}
+.b07__descr {
+    margin-bottom: 24px;
+
+    @include grey700;
+    @include text_2;
+
+    @media screen and (max-width: $break_768px) {
+        @include text_14_mob;
+        text-align: center;
+    }
+}
+.b-descr {
+}
+.b07__adr {
+    position: relative;
+    padding-left: 26px;
+
+    margin-bottom: 10px;
+    @include grey700;
+    @include text;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: -5px;
+        
+        width: 20px;
+        height: 24px;
+        
+        background-image: url('../img/icons/location.svg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+.b07__work {
+    margin-bottom: 20px;
+    padding-left: 26px;
+
+    @include grey700;
+    @include text;
+
+    @media screen and (max-width: $break_768px) {
+        margin-bottom: 27px;
+    }
+}
+.b07__inner {
+}
+.b07__btn {
+    @media screen and (max-width: $break_768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.btn {
+}

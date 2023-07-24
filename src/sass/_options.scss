@@ -7,6 +7,7 @@
 
     // overflow: hidden;
     background-color: #fff;
+    border-radius: var(--brs);
 
     &.toggle {
         overflow: initial;
@@ -15,9 +16,12 @@
 }
 
 .options-type__current {
+    cursor: pointer;
     
     .title {
         position: relative;
+        top: 1px;
+        left: 1px;
         cursor: pointer;
         transition: .25s;
         // display: inline-flex;
@@ -76,6 +80,7 @@
     border-radius: 8px;
 
     position: absolute;
+    top: 101%;
     // position: relative;
     // width: 100%;
     z-index: 1;

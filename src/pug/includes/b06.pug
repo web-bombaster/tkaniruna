@@ -1,0 +1,30 @@
+.b06
+	.b06__container.container
+		.b06__box.b06-box
+			.b06__title.b-title Нужна помощь с выбором или есть вопрос?
+			.b06__descr.b-descr Будем рады проконсультировать. Оставьте свой контакт, и мы свяжемся с вами
+			.b06__social.social
+				a(href="#").social__item.social-item
+					img(src="img/icons/whatsapp.svg", alt="").social-item__icon
+					.social-item__text Написать в WhatsApp
+				a(href="#").social__item.social-item
+					img(src="img/icons/phone-call.svg", alt="").social-item__icon
+					.social-item__text Позвонить
+
+		form(action="#" method="post").form.b06__form.b06-form
+			.form-columns
+				.input-wrapper
+					input(type="text" name="form_name" placeholder="Имя" minlength="3" maxlength="20")
+				.input-wrapper
+					input(type="tel" name="form_tel" placeholder="Телефон").form__phone
+
+			.input-wrapper
+				textarea(name='message' placeholder='Вопрос или комментарий')
+
+			button.form__btn.btn(type='submit') Отправить
+
+			.input-wrapper.agreement
+				label(for='agreement').agreement__label
+					input#agreement.form__agreement(name='agreement' type='checkbox' required='' checked='')
+					| Я принимаю условия&nbsp;
+					a(href='#') политики конфиденцианольности

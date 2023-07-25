@@ -6,48 +6,141 @@
 }
 .b02__top {
 }
-.b02-top {
-    display: flex;
-    align-items: baseline;
-    gap: 42px;
 
-    @include h3;
-    color: var(--grey900);
-}
 .b04__title {
 }
 .b-title {
 }
-.b02-top__readmore {
-    &:hover {
-        text-decoration: underline;
-    }
-}
+
 .b02__slider {
+    position: relative;
 }
 .product-slider {
 }
 .product-slider__wrapper {
+    align-items: stretch !important;
 }
 .product-slider__item {
 }
 .product-slide {
+    height: auto !important;
+
+    display: flex;
+    flex-direction: column;
 }
 .product-slide__box {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
 }
 .product-slide__img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    border-radius: var(--brs);
 }
 .product-slide__text {
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+
+    min-height: 56px;
+
+    font-size: 16px;
+    color: var(--grey900);
+    line-height: 1.2;
+    text-align: center;
+
+    background-color: rgba(#FDFDFD, .7);
+    transition: bottom .25s;
+
+    .product-slide:hover & {
+        bottom: 0;
+    }
+
+    @media screen and (max-width: $break_992px) {
+        bottom: 0;
+    }
+
+    @media screen and (max-width: $break_768px) {
+        font-size: 12px;
+    }
 }
 .product-slide__title {
+    @include h3;
+    color: var(--grey900);
+
+    @media screen and (max-width: $break_768px) {
+        @include h4_card_mob;
+    }
 }
 .product-slide__descr {
+    margin-bottom: 16px;
+
+    @include text_2;
+    color: var(--grey600);
+
+    @media screen and (max-width: $break_768px) {
+        font-size: 12px;
+    }
 }
 .product-slide__inner {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @media screen and (max-width: $break_768px) {
+        align-items: center;
+    }
 }
 .product-slide__price {
+    @include h3;
+    color: var(--grey900);
+
+    @media screen and (max-width: $break_768px) {
+        font-size: 14px;
+    }
 }
 .product-slide__favorite {
+    position: relative;
+    padding-left: 30px;
+
+    min-height: 24px;
+
+    @include text_2;
+    color: var(--grey900);
+
+    background-color: transparent;
+    border: none;
+
+    @media screen and (max-width: $break_768px) {
+        padding-left: 18px;
+        font-size: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 11px;
+        
+        width: 24px;
+        height: 24px;
+        
+        transform: translateY(-50%);
+        
+        background-image: url('../img/icons/heart.svg');
+        background-size: cover;
+        background-position: center;
+    }
 }
 .b02-bottom {
 }

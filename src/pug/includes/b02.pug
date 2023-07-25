@@ -1,53 +1,62 @@
+
+// доделать кнопку посмотреть все
+// доделать добавление в избранное
+// цены со скидками
+
 .b02.b-indent
-    .b02__container.container
-        .b02__top.b02-top
-            .b04__title.b-title Выбор покупателей
-            a(href="#").b02-top__readmore Посмотреть все товары
-        .b02__slider.product-slider
-            .product-slider__wrapper
+	.b02__container.container
+		.b02__top.b-top
+			.b04__title.b-title Выбор покупателей
+			a(href="#").b-top__readmore Посмотреть все товары
+		
+		.b02__slider
+			.product-slider.jsProductSlider.swiper
+				.product-slider__wrapper.swiper-wrapper
 
-                a(href="#").product-slider__item.product-slide
-                    .product-slide__box
-                        img(src="img/content/b02/01.jpg", alt="").product-slide__img
-                        .product-slide__text 
-                            span 63% п/э, 32% вискоза, 5% эластан
-                    .product-slide__title Футер SYDNEY
-                    .product-slide__descr 35 цветов
-                        .product-slide__inner
-                            .product-slide__price 698 р.
-                            button.product-slide__favorite Избранное
+					a(href="#").product-slider__item.product-slide.swiper-slide
+						.product-slide__box
+							img(src="img/content/b02/01.jpg", alt="").product-slide__img
+							.product-slide__text 
+								span 63% п/э, 32% вискоза, 5% эластан
+						.product-slide__title Футер SYDNEY
+						.product-slide__descr 35 цветов
+						.product-slide__inner
+							.product-slide__price 698 р.
+							button.product-slide__favorite Избранное
 
-                a(href="#").product-slider__item.product-slide
-                    .product-slide__box
-                        img(src="img/content/b02/02.jpg", alt="").product-slide__img
-                        .product-slide__text 
-                            span 100% п/э
-                    .product-slide__title Трикотаж Кашкорсе TEX STERN
-                    .product-slide__descr 74 цвета
-                        .product-slide__inner
-                            .product-slide__price 598 р.
-                            button.product-slide__favorite Избранное
+					a(href="#").product-slider__item.product-slide.swiper-slide
+						.product-slide__box
+							img(src="img/content/b02/02.jpg", alt="").product-slide__img
+							.product-slide__text 
+								span 100% п/э
+						.product-slide__title Трикотаж Кашкорсе TEX STERN
+						.product-slide__descr 74 цвета
+						.product-slide__inner
+							.product-slide__price 598 р.
+							button.product-slide__favorite Избранное
 
-                a(href="#").product-slider__item.product-slide
-                    .product-slide__box
-                        img(src="img/content/b02/03.jpg", alt="").product-slide__img
-                        .product-slide__text 
-                            span 63% п/э, 32% вискоза, 5% эластан
-                    .product-slide__title Трикотаж Кашкорсе AIRBAND
-                    .product-slide__descr 45 цветов
-                        .product-slide__inner
-                            .product-slide__price 598 р.
-                            button.product-slide__favorite Избранное
+					a(href="#").product-slider__item.product-slide.swiper-slide
+						.product-slide__box
+							img(src="img/content/b02/03.jpg", alt="").product-slide__img
+							.product-slide__text 
+								span 63% п/э, 32% вискоза, 5% эластан
+						.product-slide__title Трикотаж Кашкорсе AIRBAND
+						.product-slide__descr 45 цветов
+						.product-slide__inner
+							.product-slide__price 598 р.
+							button.product-slide__favorite Избранное
 
-                a(href="#").product-slider__item.product-slide
-                    .product-slide__box
-                        img(src="img/content/b02/04.jpg", alt="").product-slide__img
-                        .product-slide__text 
-                            span 100% п/э
-                    .product-slide__title Мех искуственный
-                    .product-slide__descr 5 цветов
-                        .product-slide__inner
-                            .product-slide__price 1454 р.
-                            button.product-slide__favorite Избранное
+					a(href="#").product-slider__item.product-slide.swiper-slide
+						.product-slide__box
+							img(src="img/content/b02/04.jpg", alt="").product-slide__img
+							.product-slide__text 
+								span 100% п/э
+						.product-slide__title Мех искуственный
+						.product-slide__descr 5 цветов
+						.product-slide__inner
+							.product-slide__price 1454 р.
+							button.product-slide__favorite Избранное
 
-        .b02__top.b02-bottom
+			.products-slider__prev.swiper__prev
+			.products-slider__next.swiper__next
+		.b02__top.b02-bottom

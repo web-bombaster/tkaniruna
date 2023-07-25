@@ -67,6 +67,21 @@ body {
 	@include container;
 }
 
+.b-top {
+    display: flex;
+    align-items: baseline;
+    gap: 42px;
+
+    @include h3;
+    color: var(--grey900);
+}
+
+.b-top__readmore {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .b-title {
 	max-width: 524px;
     @include h2;
@@ -239,20 +254,24 @@ h3:not([class]) {
 	top: 50%;
 	transform: translateY(-50%);
 	height: 4.2rem;
-	width: 4.2rem;
-	border-radius: 50%;
-	background-color: rgba(254, 254, 254, 0.9);
+	width: 4.2rem;	
 
-	background-image: url('../img/icons/arrow.svg');
+	background-image: url('../img/icons/arrow-right.svg');
+	background-size: 36px 36px;
 	background-repeat: no-repeat;
 	background-position: center;
 
-	box-shadow: rem rem .3rem rem #b3b3b3;
+	// box-shadow: 0 0 .3rem 0 #b3b3b3;
 
 	z-index: 1;
 	cursor: pointer;
 
+	@media screen and (max-width: 1400px) {
+		background-color: var(--grey200);
+	}
+
 	@media screen and (max-width: $break_768px) {
+		display: none;
 		height: 3.2rem;
 		width: 3.2rem;
 	}
@@ -262,7 +281,7 @@ h3:not([class]) {
 	left: calc(-4.2rem - 1.5rem);
 	transform: translateY(-50%) rotate(180deg);
 
-	@media screen and (max-width: 120rem) {
+	@media screen and (max-width: 1400px) {
 		left: -1.5rem;
 	}
 }
@@ -270,7 +289,7 @@ h3:not([class]) {
 .swiper__next {
 	right: calc(-4.2rem - 1.5rem);
 
-	@media screen and (max-width: 120rem) {
+	@media screen and (max-width: 1400px) {
 		right: -1.5rem;
 	}
 }

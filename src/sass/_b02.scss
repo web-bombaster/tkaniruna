@@ -1,0 +1,53 @@
+.b02 {
+}
+.b02__container {
+}
+.container {
+}
+.b02__top {
+}
+.b02-top {
+    display: flex;
+    align-items: baseline;
+    gap: 42px;
+
+    @include h3;
+    color: var(--grey900);
+}
+.b04__title {
+}
+.b-title {
+}
+.b02-top__readmore {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.b02__slider {
+}
+.product-slider {
+}
+.product-slider__wrapper {
+}
+.product-slider__item {
+}
+.product-slide {
+}
+.product-slide__box {
+}
+.product-slide__img {
+}
+.product-slide__text {
+}
+.product-slide__title {
+}
+.product-slide__descr {
+}
+.product-slide__inner {
+}
+.product-slide__price {
+}
+.product-slide__favorite {
+}
+.b02-bottom {
+}

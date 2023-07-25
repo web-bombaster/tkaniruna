@@ -88,6 +88,14 @@ body {
     color: #545454;
 }
 
+.b-indent {
+    margin-bottom: 48px;
+
+    @media screen and (max-width: $break_768px) {
+        margin-bottom: 32px;
+    }
+}
+
 a {
 	color: var(--color-text);
 	text-decoration: none;

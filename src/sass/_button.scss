@@ -13,6 +13,7 @@
 
 	transition: background-color .25s, color .25s, transform .25s;
 	cursor: pointer;
+
 }
 
 .btn:hover:not(:disabled) {
@@ -47,5 +48,19 @@
 
 	&:hover {
 		background-color: #FF7043;
+	}
+}
+
+.btn--transparent {
+	display: inline-flex;
+	padding: 12px 24px;
+	min-width: 120px;
+
+	border: 1px solid var(--grey000);
+	background-color: transparent;
+
+	@media screen and (max-width: $break_768px) {
+		color: var(--grey900);
+		background-color: var(--grey100);
 	}
 }

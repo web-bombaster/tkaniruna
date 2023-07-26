@@ -115,11 +115,11 @@
 
 @mixin container {
 	width: 100%;
-	max-width: 120rem;
+	max-width: 122rem;
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 0 3rem;
 
-	@media screen and (max-width: $break_992px) {
+	@media screen and (max-width: $break_480px) {
 		padding: 0 1.5rem;
 	}
 }

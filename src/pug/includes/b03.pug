@@ -1,0 +1,42 @@
+
+// доделать добавление в избранное
+
+.b03.b-indent.jsNewProducts
+	.b03__container.container
+
+		.b03-box
+			.b03__title.b-title Новинки
+			.b03__descr.b-descr Новые поступления качественных тканей и фурнитуры. В наличии — успейте заказать
+			a(href="#").b03__btn.btn.btn--transparent Смотреть все новинки
+
+		.b03__slider
+			.product-slider.product-slider--dark.jsProductSliderMini.swiper
+				.product-slider__wrapper.swiper-wrapper
+
+					a(href="#").product-slider__item.product-slide.swiper-slide
+						.product-slide__box
+							img(src="img/content/b02/01.jpg", alt="").product-slide__img
+							.product-slide__text 
+								span 63% п/э, 32% вискоза, 5% эластан
+						.product-slide__title Костюмные Rika
+						.product-slide__descr 24 цвета
+						.product-slide__inner
+							.product-slide__price 1187 р.
+								span.old-price 1320 р.
+							button.product-slide__favorite Избранное
+
+					a(href="#").product-slider__item.product-slide.swiper-slide
+						.product-slide__box
+							img(src="img/content/b02/02.jpg", alt="").product-slide__img
+							.product-slide__text 
+								span 100% п/э
+						.product-slide__title Атлас Letica
+						.product-slide__descr 23 цвета
+						.product-slide__inner
+							.product-slide__price 660 р.
+								span.old-price 760 р.
+							button.product-slide__favorite Избранное
+
+			.jsProductSliderMini__prev.swiper__prev
+			.jsProductSliderMini__next.swiper__next
+		.b03__bottom.b03-bottom.b-bottom

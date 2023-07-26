@@ -13,22 +13,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    // left: -32px;
-    // right: -32px;
     height: 100%;
     width: 100%;
     z-index: 1;
-    
+
     @media screen and (max-width: $break_1200px) {
         width: 100%;
     }
 
     @media screen and (max-width: $break_768px) {
         position: relative;
-        // left: 0;
-        left: -32px;
-        // width: 100%;
-        width: calc(100% + 2*32px);
+        // left: -32px;
+        // right: -32px;
+        // max-width: calc(100% + 2*32px);
+        // width: calc(100% + 2*32px);
+
         margin-bottom: 32px;
         height: 320px;
 
@@ -64,6 +63,13 @@
         max-width: 100%;
         left: 0;
     }
+
+    @media screen and (max-width: $break_480px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
 }
 .b07__title {
     margin-bottom: 10px;
@@ -117,6 +123,8 @@
     }
 }
 .b07__inner {
+    position: relative;
+    width: 100%;
 }
 .b07__btn {
     @media screen and (max-width: $break_768px) {

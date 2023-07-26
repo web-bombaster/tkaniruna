@@ -14,10 +14,9 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- доделать кнопку посмотреть все-->
+      <div class="visible" id="preloader"></div>
       <!-- доделать добавление в избранное-->
-      <!-- цены со скидками-->
-      <div class="b02 b-indent">
+      <div class="b02 b-indent jsFavorite">
         <div class="b02__container container">
           <div class="b02__top b-top">
             <div class="b04__title b-title">Выбор покупателей</div><a class="b-top__readmore" href="#">Посмотреть все товары</a>
@@ -31,7 +30,7 @@
                   <div class="product-slide__title">Футер SYDNEY</div>
                   <div class="product-slide__descr">35 цветов</div>
                   <div class="product-slide__inner">
-                    <div class="product-slide__price">698 р.</div>
+                    <div class="product-slide__price">698 р.<span class="old-price">1120 р.</span></div>
                     <button class="product-slide__favorite">Избранное</button>
                   </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
                   <div class="product-slide__box"><img class="product-slide__img" src="img/content/b02/02.jpg" alt="">
@@ -40,7 +39,7 @@
                   <div class="product-slide__title">Трикотаж Кашкорсе TEX STERN</div>
                   <div class="product-slide__descr">74 цвета</div>
                   <div class="product-slide__inner">
-                    <div class="product-slide__price">598 р.</div>
+                    <div class="product-slide__price">598 р.<span class="old-price">980 р.</span></div>
                     <button class="product-slide__favorite">Избранное</button>
                   </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
                   <div class="product-slide__box"><img class="product-slide__img" src="img/content/b02/03.jpg" alt="">
@@ -49,7 +48,7 @@
                   <div class="product-slide__title">Трикотаж Кашкорсе AIRBAND</div>
                   <div class="product-slide__descr">45 цветов</div>
                   <div class="product-slide__inner">
-                    <div class="product-slide__price">598 р.</div>
+                    <div class="product-slide__price">598 р.<span class="old-price">587 р.</span></div>
                     <button class="product-slide__favorite">Избранное</button>
                   </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
                   <div class="product-slide__box"><img class="product-slide__img" src="img/content/b02/04.jpg" alt="">
@@ -58,14 +57,101 @@
                   <div class="product-slide__title">Мех искуственный</div>
                   <div class="product-slide__descr">5 цветов</div>
                   <div class="product-slide__inner">
-                    <div class="product-slide__price">1454 р.</div>
+                    <div class="product-slide__price">1454 р.<span class="old-price">787 р.</span></div>
                     <button class="product-slide__favorite">Избранное</button>
                   </div></a></div>
             </div>
-            <div class="products-slider__prev swiper__prev"></div>
-            <div class="products-slider__next swiper__next"></div>
+            <div class="jsProductSlider__prev swiper__prev"></div>
+            <div class="jsProductSlider__next swiper__next"></div>
           </div>
-          <div class="b02__top b02-bottom"></div>
+          <div class="b02__bottom b02-bottom b-bottom"></div>
+        </div>
+      </div>
+      <!-- доделать добавление в избранное-->
+      <div class="b03 b-indent jsNewProducts">
+        <div class="b03__container container">
+          <div class="b03-box">
+            <div class="b03__title b-title">Новинки</div>
+            <div class="b03__descr b-descr">Новые поступления качественных тканей и фурнитуры. В наличии — успейте заказать</div><a class="b03__btn btn btn--transparent" href="#">Смотреть все новинки</a>
+          </div>
+          <div class="b03__slider">
+            <div class="product-slider product-slider--dark jsProductSliderMini swiper">
+              <div class="product-slider__wrapper swiper-wrapper"><a class="product-slider__item product-slide swiper-slide" href="#">
+                  <div class="product-slide__box"><img class="product-slide__img" src="img/content/b02/01.jpg" alt="">
+                    <div class="product-slide__text"> <span>63% п/э, 32% вискоза, 5% эластан</span></div>
+                  </div>
+                  <div class="product-slide__title">Костюмные Rika</div>
+                  <div class="product-slide__descr">24 цвета</div>
+                  <div class="product-slide__inner">
+                    <div class="product-slide__price">1187 р.<span class="old-price">1320 р.</span></div>
+                    <button class="product-slide__favorite">Избранное</button>
+                  </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
+                  <div class="product-slide__box"><img class="product-slide__img" src="img/content/b02/02.jpg" alt="">
+                    <div class="product-slide__text"> <span>100% п/э</span></div>
+                  </div>
+                  <div class="product-slide__title">Атлас Letica</div>
+                  <div class="product-slide__descr">23 цвета</div>
+                  <div class="product-slide__inner">
+                    <div class="product-slide__price">660 р.<span class="old-price">760 р.</span></div>
+                    <button class="product-slide__favorite">Избранное</button>
+                  </div></a></div>
+            </div>
+            <div class="jsProductSliderMini__prev swiper__prev"></div>
+            <div class="jsProductSliderMini__next swiper__next"></div>
+          </div>
+          <div class="b03__bottom b03-bottom b-bottom"></div>
+        </div>
+      </div>
+      <!-- доделать добавление в избранное-->
+      <div class="b02 b-indent jsSale">
+        <div class="b02__container container">
+          <div class="b02__top b-top">
+            <div class="b04__title b-title">Скидки</div><a class="b-top__readmore" href="#">Все товары со скидками</a>
+          </div>
+          <div class="b02__slider">
+            <div class="product-slider jsProductSliderSale swiper">
+              <div class="product-slider__wrapper swiper-wrapper"><a class="product-slider__item product-slide swiper-slide" href="#">
+                  <div class="product-slide__box"><img class="product-slide__img" src="img/content/productSliderSale/01.jpg" alt="">
+                    <div class="product-slide__text"> <span>63% п/э, 32% вискоза, 5% эластан</span></div>
+                  </div>
+                  <div class="product-slide__title">Костюмные Grape</div>
+                  <div class="product-slide__descr">13 цветов</div>
+                  <div class="product-slide__inner">
+                    <div class="product-slide__price">987 р.<span class="old-price">1120 р.</span></div>
+                    <button class="product-slide__favorite">Избранное</button>
+                  </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
+                  <div class="product-slide__box"><img class="product-slide__img" src="img/content/productSliderSale/02.jpg" alt="">
+                    <div class="product-slide__text"> <span>100% п/э</span></div>
+                  </div>
+                  <div class="product-slide__title">Поплин MAISON</div>
+                  <div class="product-slide__descr">9 цветов</div>
+                  <div class="product-slide__inner">
+                    <div class="product-slide__price">720 р.<span class="old-price">980 р.</span></div>
+                    <button class="product-slide__favorite">Избранное</button>
+                  </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
+                  <div class="product-slide__box"><img class="product-slide__img" src="img/content/productSliderSale/04.jpg" alt="">
+                    <div class="product-slide__text"> <span>100% п/э</span></div>
+                  </div>
+                  <div class="product-slide__title">Бархат BARSELONA</div>
+                  <div class="product-slide__descr">29 цветов</div>
+                  <div class="product-slide__inner">
+                    <div class="product-slide__price">479 р.<span class="old-price">587 р.</span></div>
+                    <button class="product-slide__favorite">Избранное</button>
+                  </div></a><a class="product-slider__item product-slide swiper-slide" href="#">
+                  <div class="product-slide__box"><img class="product-slide__img" src="img/content/productSliderSale/03.jpg" alt="">
+                    <div class="product-slide__text"> <span>63% п/э, 32% вискоза, 5% эластан</span></div>
+                  </div>
+                  <div class="product-slide__title">Лён Stripe</div>
+                  <div class="product-slide__descr">8 цветов</div>
+                  <div class="product-slide__inner">
+                    <div class="product-slide__price">658 р.<span class="old-price">787 р.</span></div>
+                    <button class="product-slide__favorite">Избранное</button>
+                  </div></a></div>
+            </div>
+            <div class="jsProductSliderSale__prev swiper__prev"></div>
+            <div class="jsProductSliderSale__next swiper__next"></div>
+          </div>
+          <div class="b02__bottom b02-bottom b-bottom"></div>
         </div>
       </div>
       <div class="b04"><img class="b04__img" src="../../img/content/b04-bg.jpg" alt="">
@@ -121,7 +207,7 @@
             <div class="input-wrapper">
               <textarea name="message" placeholder="Вопрос или комментарий"></textarea>
             </div>
-            <button class="form__btn btn" type="submit">Отправить</button>
+            <button class="form__btn btn btn--transparent" type="submit">Отправить</button>
             <div class="input-wrapper agreement">
               <label class="agreement__label" for="agreement">
                 <input class="form__agreement" id="agreement" name="agreement" type="checkbox" required="" checked="">Я принимаю условия&nbsp;<a href="#">политики конфиденцианольности</a>

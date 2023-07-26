@@ -15,6 +15,70 @@
   <body>
     <div class="wrapper">
       <div class="visible" id="preloader"></div>
+      <header class="header">
+        <div class="header-top">
+          <div class="header-top__container container">
+            <div class="location">
+              <div class="location-select">Ростов-на-Дону</div>
+            </div>
+            <ul class="top-menu">
+              <li class="top-menu__item"><a class="top-menu__link" href="#">Доставка</a></li>
+              <li class="top-menu__item"><a class="top-menu__link" href="#">Схемы и выкройки</a></li>
+              <li class="top-menu__item"><a class="top-menu__link" href="#">Акции</a></li>
+              <li class="top-menu__item"><a class="top-menu__link" href="#">Подарочные сертификаты</a></li>
+              <li class="top-menu__item"><a class="top-menu__link" href="#">Анкета для предоставления образцов</a></li>
+              <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-middle">
+          <div class="header-middle__container container"><a class="logo" href="#"><img class="logo__img" src="img/icons/logo.svg" alt="" height="28" width="104"></a>
+            <button class="btn btn__catalog-menu js-burger burger__menu-btn catalog-menu__btn"><span></span>Каталог</button>
+            <div class="search">
+              <div class="options-type options-type__search">
+                <div class="options-type__current">
+                  <div class="title">Везде</div>
+                  <div class="icon"></div>
+                </div>
+                <div class="options-type__variants">
+                  <div class="variants-item">Везде</div>
+                  <div class="variants-item">В тканях</div>
+                  <div class="variants-item">В фурнитуре</div>
+                </div>
+              </div>
+              <form class="search-form" action="/search" method="GET">
+                <input class="search-field" type="search" name="search" placeholder="Искать в магазине">
+                <button class="btn-search" type="submit" aria-label="Найти"> </button>
+              </form>
+            </div>
+            <div class="user"><a class="user-item user__account" href="">Александр</a><a class="user-item user__favourites" href="">Избранное</a><a class="user-item user__cart" href="">Корзина</a></div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="header-bottom__container container">
+            <div class="header-bottom__toggle toggle-hb">
+              <div class="options-type options-type__toggle-hb">
+                <div class="options-type__current">
+                  <div class="title">Ткани</div>
+                  <div class="icon"></div>
+                </div>
+                <div class="options-type__variants">
+                  <div class="variants-item">Ткани</div>
+                  <div class="variants-item">Фурнитура</div>
+                </div>
+              </div>
+            </div>
+            <div class="header-bottom__menu">
+              <ul class="header-bottom__menu menu-hb">
+                <li class="menu-hb__item"><a class="menu-hb__link" href="#">Блузочные</a><a class="menu-hb__link" href="#">Костюмные</a><a class="menu-hb__link" href="#">Спортивные</a><a class="menu-hb__link" href="#">Сценические</a><a class="menu-hb__link" href="#">Подкладочные</a><a class="menu-hb__link" href="#">Бельевые</a><a class="menu-hb__link" href="#">Плательные</a><a class="menu-hb__link" href="#">Детские</a><a class="menu-hb__link" href="#">Для дома</a><a class="menu-hb__link" href="#">Верхняя одежда</a><a class="menu-hb__link" href="#">Вечерние</a><a class="menu-hb__link" href="#">Эксклюзивные</a><a class="menu-hb__link" href="#">Рубашечные</a></li>
+              </ul>
+              <ul class="header-bottom__menu menu-hb">
+                <li class="menu-hb__item"><a class="menu-hb__link" href="#">Нитки</a><a class="menu-hb__link" href="#">Кружево</a><a class="menu-hb__link" href="#">Пуговицы</a><a class="menu-hb__link" href="#">Резинка</a><a class="menu-hb__link" href="#">Косая бейка</a><a class="menu-hb__link" href="#">Швейные принадлежности</a><a class="menu-hb__link" href="#">Кнопки</a><a class="menu-hb__link" href="#">Ленты</a><a class="menu-hb__link" href="#">Клеевые материалы</a><a class="menu-hb__link" href="#">Булавки</a><a class="menu-hb__link" href="#">Пряжки</a><a class="menu-hb__link" href="#">Трикотажная фурнитура</a><a class="menu-hb__link" href="#">Декоры для одежды</a><a class="menu-hb__link" href="#">Шнуры</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
       <!-- доделать добавление в избранное-->
       <div class="b02 b-indent jsFavorite">
         <div class="b02__container container">

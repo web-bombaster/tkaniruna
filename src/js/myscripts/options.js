@@ -1,4 +1,6 @@
-initClassToggleItem('.options-type__variants', '.variants-item'); // инициализация вариантов, функция в helpers.js
+// инициализация вариантов, функция в helpers.js
+initClassToggleItem('.options-type__variants', '.variants-item');
+// initClassToggleItem('.header-bottom__menu', '.menu-hb');
 
 // по щелчку на кнопку с выбором типа .options-type__current появляется выпадашка с вариантами
 let optionsToggle = function() {

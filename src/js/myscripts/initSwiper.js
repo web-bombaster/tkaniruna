@@ -57,22 +57,6 @@ function initSwiper() {
 		});
 	};
 
-	// if (document.querySelector('.jsProductSliderMini')) {
-	// 	new Swiper('.jsProductSliderMini', {
-	// 		spaceBetween: 16,
-	// 		slidesPerView: 1.2,
-	// 		loop: true,
-	// 		breakpoints: {
-	// 			400: {
-	// 				slidesPerView: 2,
-	// 			},
-	// 		},
-	// 		navigation: {
-	// 			nextEl: '.jsProductSliderMini__next',
-	// 			prevEl: '.jsProductSliderMini__prev',
-	// 		},
-	// 	});
-	// };
 };
 
 // window.addEventListener("resize", initSwiper);

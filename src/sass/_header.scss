@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     padding-top: 60px;
 }
 .header-top {
@@ -102,8 +103,7 @@
 }
 .options-type__variants {
 }
-.variants-item {
-}
+
 .search-form {
 }
 .search-field {
@@ -155,4 +155,54 @@
     }
 }
 .header-bottom {
+}
+
+.header-bottom__container {
+    display: flex;
+    gap: 42px;
+}
+
+.header-bottom__toggle {
+}
+.toggle-hb {
+}
+.options-type {
+}
+.options-type__toggle-hb {
+}
+.options-type__current {
+}
+.title {
+}
+.icon {
+}
+.options-type__variants {
+}
+.variants-item {
+}
+.toggle {
+}
+.header-bottom-menu {
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+.menu-hb {
+    display: none;
+    // flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 42px;
+
+    &.toggle {
+        display: flex;
+    }
+}
+.menu-hb__item {
+}
+.menu-hb__link {
+    white-space: nowrap;
+
+    @include fz-14_fw-500_lh-14-24;
+    @include grey700;
 }

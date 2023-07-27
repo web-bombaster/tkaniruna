@@ -3,6 +3,7 @@ document.addEventListener(
 	"DOMContentLoaded", () => {
 		// include './myscripts/helpers.js'
 		// include './myscripts/burger.js'
+		// include './myscripts/catalog-menu.js'
 		// include './myscripts/options.js'
 		// include './myscripts/initSwiper.js'
 

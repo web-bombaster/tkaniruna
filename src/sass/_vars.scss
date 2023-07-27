@@ -46,4 +46,7 @@ $break_330px: 330px;
 
     --heroMinCol: calc(100% / 5 - 3 / 4 * var(--mainGap));
     --heroMaxCol: calc((100% - var(--heroMinCol) - 3 / 4 * var(--mainGap)) / 3);
+
+    // Элементы сайта
+    --catalogMenuWidth: 160px;
 }

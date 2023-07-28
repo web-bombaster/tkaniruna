@@ -8,7 +8,7 @@
 	background-size: cover;
 	background-position: center;
 
-	@media screen and (max-width: $break_768px) {
+	@media screen and (max-width: $b_768px) {
 		padding-top: 24px;
 		padding-bottom: 32px;
 	}
@@ -24,7 +24,7 @@
 	align-items: center;
 	gap: 16px;
 
-	@media screen and (max-width: $break_768px) {
+	@media screen and (max-width: $b_768px) {
 		flex-direction: column;
 	}
 }
@@ -34,14 +34,14 @@
 	width: calc(50% - 16px / 2);
 	flex-shrink: 0;
 
-	@media screen and (max-width: $break_768px) {
+	@media screen and (max-width: $b_768px) {
 		width: 100%;
 	}
 }
 .b03__title {
 	margin-bottom: 24px;
 
-	@media screen and (max-width: $break_768px) {
+	@media screen and (max-width: $b_768px) {
 		margin-bottom: 4px;
 	}
 }
@@ -51,7 +51,7 @@
 	margin-bottom: 44px;
 	max-width: 400px;
 
-	@media screen and (max-width: $break_768px) {
+	@media screen and (max-width: $b_768px) {
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 18px;
@@ -71,7 +71,7 @@
 	width: calc(50% - 16px / 2);
 	flex-shrink: 0;
 
-	@media screen and (max-width: $break_768px) {
+	@media screen and (max-width: $b_768px) {
 		width: 100%;
 		max-width: 500px;
 	}

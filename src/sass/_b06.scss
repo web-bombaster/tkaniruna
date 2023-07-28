@@ -9,7 +9,7 @@
     background-size: cover;
     background-position: center;
 
-    @media screen and (max-width: $break_768px) {
+    @media screen and (max-width: $b_768px) {
         padding-top: 32px;
         padding-bottom: 32px;
 
@@ -20,7 +20,7 @@
         margin-bottom: 24px;
         color: var(--grey000);
 
-        @media screen and (max-width: $break_768px) {
+        @media screen and (max-width: $b_768px) {
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 4px;
@@ -33,7 +33,7 @@
         max-width: 420px;
         color: var(--grey000);
 
-        @media screen and (max-width: $break_768px) {
+        @media screen and (max-width: $b_768px) {
             margin-left: auto;
             margin-right: auto;
             line-height: 1.4;
@@ -44,7 +44,7 @@
         align-items: center;
         flex-grow: 1;
 
-        @media screen and (max-width: $break_768px) {
+        @media screen and (max-width: $b_768px) {
             display: none;
         }
     }
@@ -53,7 +53,7 @@
     display: flex;
     gap: 60px;
 
-    @media screen and (max-width: $break_768px) {
+    @media screen and (max-width: $b_768px) {
         justify-content: center;
     }
 }
@@ -62,7 +62,7 @@
 .b06__box {
 }
 .b06-box {
-    @media screen and (max-width: $break_768px) {
+    @media screen and (max-width: $b_768px) {
         width: 100%;
     }
 }
@@ -102,7 +102,7 @@
     gap: 13px;
     width: 100%;
 
-    @media screen and (max-width: $break_768px) {
+    @media screen and (max-width: $b_768px) {
         display: flex;
     }
 }

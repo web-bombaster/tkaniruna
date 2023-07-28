@@ -1,450 +1,454 @@
-header.header
+header.header.b-indent
 
-	.header-top
-		.header-top__container.container
-			.location
-				.location-select Ростов-на-Дону
-			ul.top-menu
-				li.top-menu__item
-					a(href="#").top-menu__link Доставка
-				li.top-menu__item
-					a(href="#").top-menu__link Схемы и выкройки
-				li.top-menu__item
-					a(href="#").top-menu__link Акции
-				li.top-menu__item
-					a(href="#").top-menu__link Подарочные сертификаты
-				li.top-menu__item
-					a(href="#").top-menu__link Анкета для предоставления образцов
-				li.top-menu__item
-					a(href="#").top-menu__link Контакты
+	.header__container.container
 
-	.header-middle
-		.header-middle__container.container
-			a(href="#").logo
-				img(src="img/icons/logo.svg", alt="", height="28", width="104").logo__img
-			button.btn.btn__catalog-menu.js-burger.burger__menu-btn.catalog-menu__btn
-				span
-				| Каталог
-			include ../includes/search-panel
-			.user
-				a(href="").user-item.user__account Александр
-				a(href="").user-item.user__favourites Избранное
-				a(href="").user-item.user__cart Корзина
+		.header-top
+			.header-top__container.container
+				.location
+					.location-select Ростов-на-Дону
+				ul.top-menu
+					li.top-menu__item
+						a(href="#").top-menu__link Доставка
+					li.top-menu__item
+						a(href="#").top-menu__link Схемы и выкройки
+					li.top-menu__item
+						a(href="#").top-menu__link Акции
+					li.top-menu__item
+						a(href="#").top-menu__link Подарочные сертификаты
+					li.top-menu__item
+						a(href="#").top-menu__link Анкета для предоставления образцов
+					li.top-menu__item
+						a(href="#").top-menu__link Контакты
 
-	.panel-menu
-		.panel-menu__container.container
-			.panel-menu__container
-			.catalog-menu
-				ul.catalog-menu__list
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link %Скидки
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link Вид
-						ul.catalog-submenu
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Бельевые
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Блузочные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Верхняя одежда
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Вечерние
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Эксклюзивные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Детские
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Для дома
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Костюмные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Плательные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Подкладочные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Рубашечные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Спортивные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Сценические
+		.header-middle
+			.header-middle__container.container
+				a(href="#").logo
+					img(src="img/icons/logo.svg", alt="", height="28", width="104").logo__img
+				button.btn.btn__catalog-menu.js-burger.burger__menu-btn.catalog-menu__btn
+					span
+					| Каталог
+				include ../includes/search-panel
+				.user
+					a(href="").user-item.user__account Профиль
+					a(href="").user-item.user__favourites Избранное
+					a(href="").user-item.user__cart Корзина
+				button.mobile-menu-btn.burger__menu-btn.js-burger.jsMobileMenuBtnToggle
+					span
 
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link Рисунок
-						ul.catalog-submenu
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link ЗигЗаг
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Индийские Огурцы (Пейсли)
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Круги
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Лица
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Надписи
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Объёмный рисунок
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пятна
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Абстракция
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Буквы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Веточки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Вкусняшки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Геометрия
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Горох
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Горошки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Градиент
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Граффити
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Гусиная Лапка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Детские
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Звезды
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Звериные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Зверушки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Зебра
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Камуфляж
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Капли
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Клетка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Леопард
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Листики
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Насекомые
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Новогодние
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Огурцы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Полоска
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Предметы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Птицы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Птички
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пшено
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пятна
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Растительные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Сердечки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Спорт
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Съедобные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Транспорт
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Узор
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Фрукты
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Цветочки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Цветы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Цепи
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Человечки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Штрихи
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Ягодки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Ёлочка
+		.panel-menu
+			.panel-menu__container.container
+				.panel-menu__box
+					.catalog-menu
+						ul.catalog-menu__list
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link %Скидки
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link Вид
+								ul.catalog-submenu
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Бельевые
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Блузочные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Верхняя одежда
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Вечерние
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Эксклюзивные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Детские
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Для дома
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Костюмные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Плательные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Подкладочные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Рубашечные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Спортивные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Сценические
 
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link Цвет
-						ul.catalog-submenu
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Белый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Оранжевый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Коричневый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Синий
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Чёрный
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Светлый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Коралловый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Фуксия
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Зелёный
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Мультиколор
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Бежевый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Розовый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Бордовый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Бирюзовый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Чёрно-белый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Нюдовый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Красный
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Фиолетовый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Хаки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Жёлтый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Терракотовый
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Голубой
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Серый
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link Рисунок
+								ul.catalog-submenu
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link ЗигЗаг
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Индийские Огурцы (Пейсли)
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Круги
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Лица
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Надписи
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Объёмный рисунок
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пятна
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Абстракция
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Буквы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Веточки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Вкусняшки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Геометрия
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Горох
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Горошки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Градиент
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Граффити
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Гусиная Лапка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Детские
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Звезды
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Звериные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Зверушки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Зебра
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Камуфляж
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Капли
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Клетка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Леопард
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Листики
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Насекомые
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Новогодние
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Огурцы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Полоска
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Предметы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Птицы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Птички
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пшено
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пятна
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Растительные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Сердечки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Спорт
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Съедобные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Транспорт
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Узор
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Фрукты
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Цветочки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Цветы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Цепи
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Человечки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Штрихи
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Ягодки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Ёлочка
 
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link По алфавиту
-						ul.catalog-submenu
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Атлас
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Бархат
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Бифлекс
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Букле
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Вельвет
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Велюр
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Вискоза
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Вуаль
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Джерси
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Джинс
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Жаккард
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Замша
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Кожа
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Костюмные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Котон
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Креп
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Кружево
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Купра
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Курточная ткань
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Лайкра
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Лён
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Марлевка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Мех
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Муслин
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Неопрен
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Органза
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пайетки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пальтовые
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Парча
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Плательные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Плащевка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Подкладочные
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Поплин
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Прошва
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Сатин
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Сетка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Сорочечная
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Тафта
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Твид
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Твил
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Тенсель
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Ткани Италии
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотаж
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотаж бельевой
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотаж вязаный
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотаж Кашкорсе
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотаж лапша
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотаж масло
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Утеплитель
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Фатин
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Фланель
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Флис
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Футер
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Хлопок
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Шелк искусственный
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Шёлк натуральный
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Шифон
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Штапель
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link Цвет
+								ul.catalog-submenu
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Белый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Оранжевый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Коричневый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Синий
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Чёрный
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Светлый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Коралловый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Фуксия
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Зелёный
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Мультиколор
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Бежевый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Розовый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Бордовый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Бирюзовый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Чёрно-белый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Нюдовый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Красный
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Фиолетовый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Хаки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Жёлтый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Терракотовый
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Голубой
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Серый
 
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link Фурнитура
-						ul.catalog-submenu
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link По алфавиту
+								ul.catalog-submenu
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Атлас
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Бархат
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Бифлекс
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Букле
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Вельвет
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Велюр
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Вискоза
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Вуаль
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Джерси
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Джинс
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Жаккард
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Замша
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Кожа
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Костюмные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Котон
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Креп
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Кружево
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Купра
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Курточная ткань
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Лайкра
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Лён
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Марлевка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Мех
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Муслин
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Неопрен
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Органза
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пайетки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пальтовые
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Парча
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Плательные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Плащевка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Подкладочные
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Поплин
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Прошва
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Сатин
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Сетка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Сорочечная
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Тафта
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Твид
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Твил
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Тенсель
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Ткани Италии
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотаж
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотаж бельевой
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотаж вязаный
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотаж Кашкорсе
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотаж лапша
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотаж масло
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Утеплитель
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Фатин
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Фланель
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Флис
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Футер
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Хлопок
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Шелк искусственный
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Шёлк натуральный
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Шифон
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Штапель
 
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Клеевые материалы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Нитки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Кружево
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пуговицы
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Резинка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Косая бейка
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Швейные принадлежности
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Кнопки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Ленты
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Булавки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Пряжки
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Трикотажная фурнитура
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Декоры для одежды
-							li.catalog-submenu__item
-								a(href="#").catalog-submenu__link Шнуры
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link Фурнитура
+								ul.catalog-submenu
 
-					li.catalog-menu__item
-						a(href="#").catalog-menu__link Условия доставки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Клеевые материалы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Нитки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Кружево
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пуговицы
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Резинка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Косая бейка
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Швейные принадлежности
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Кнопки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Ленты
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Булавки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Пряжки
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Трикотажная фурнитура
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Декоры для одежды
+									li.catalog-submenu__item
+										a(href="#").catalog-submenu__link Шнуры
 
-	.header-bottom
-		.header-bottom__container.container
-			.header-bottom__toggle.toggle-hb
-				.options-type.options-type__toggle-hb
-					.options-type__current
-						.title Ткани
-						.icon
-					.options-type__variants
-						.variants-item Ткани
-						.variants-item Фурнитура
-			.header-bottom-menu
-				ul.header-bottom__menu.menu-hb
-					li.menu-hb__item
-						a(href="#").menu-hb__link Блузочные
-					li.menu-hb__item
-						a(href="#").menu-hb__link Костюмные
-					li.menu-hb__item
-						a(href="#").menu-hb__link Спортивные
-					li.menu-hb__item
-						a(href="#").menu-hb__link Сценические
-					li.menu-hb__item
-						a(href="#").menu-hb__link Подкладочные
-					li.menu-hb__item
-						a(href="#").menu-hb__link Бельевые
-					li.menu-hb__item
-						a(href="#").menu-hb__link Плательные
-					li.menu-hb__item
-						a(href="#").menu-hb__link Детские
-					li.menu-hb__item
-						a(href="#").menu-hb__link Для дома
-					li.menu-hb__item
-						a(href="#").menu-hb__link Верхняя одежда
-					li.menu-hb__item
-						a(href="#").menu-hb__link Вечерние
-					li.menu-hb__item
-						a(href="#").menu-hb__link Эксклюзивные
-					li.menu-hb__item
-						a(href="#").menu-hb__link Рубашечные
-				ul.header-bottom__menu.menu-hb
-					li.menu-hb__item
-						a(href="#").menu-hb__link Нитки
-					li.menu-hb__item
-						a(href="#").menu-hb__link Кружево
-					li.menu-hb__item
-						a(href="#").menu-hb__link Пуговицы
-					li.menu-hb__item
-						a(href="#").menu-hb__link Резинка
-					li.menu-hb__item
-						a(href="#").menu-hb__link Косая бейка
-					li.menu-hb__item
-						a(href="#").menu-hb__link Швейные принадлежности
-					li.menu-hb__item
-						a(href="#").menu-hb__link Кнопки
-					li.menu-hb__item
-						a(href="#").menu-hb__link Ленты
-					li.menu-hb__item
-						a(href="#").menu-hb__link Клеевые материалы
-					li.menu-hb__item
-						a(href="#").menu-hb__link Булавки
-					li.menu-hb__item
-						a(href="#").menu-hb__link Пряжки
-					li.menu-hb__item
-						a(href="#").menu-hb__link Трикотажная фурнитура
-					li.menu-hb__item
-						a(href="#").menu-hb__link Декоры для одежды
-					li.menu-hb__item
-						a(href="#").menu-hb__link Шнуры
+							li.catalog-menu__item
+								a(href="#").catalog-menu__link Условия доставки
+
+		.header-bottom
+			.header-bottom__container.container
+				.header-bottom__toggle.toggle-hb
+					.options-type.options-type__toggle-hb
+						.options-type__current
+							.title Ткани
+							.icon
+						.options-type__variants
+							.variants-item Ткани
+							.variants-item Фурнитура
+				.header-bottom-menu
+					ul.header-bottom__menu.menu-hb
+						li.menu-hb__item
+							a(href="#").menu-hb__link Блузочные
+						li.menu-hb__item
+							a(href="#").menu-hb__link Костюмные
+						li.menu-hb__item
+							a(href="#").menu-hb__link Спортивные
+						li.menu-hb__item
+							a(href="#").menu-hb__link Сценические
+						li.menu-hb__item
+							a(href="#").menu-hb__link Подкладочные
+						li.menu-hb__item
+							a(href="#").menu-hb__link Бельевые
+						li.menu-hb__item
+							a(href="#").menu-hb__link Плательные
+						li.menu-hb__item
+							a(href="#").menu-hb__link Детские
+						li.menu-hb__item
+							a(href="#").menu-hb__link Для дома
+						li.menu-hb__item
+							a(href="#").menu-hb__link Верхняя одежда
+						li.menu-hb__item
+							a(href="#").menu-hb__link Вечерние
+						li.menu-hb__item
+							a(href="#").menu-hb__link Эксклюзивные
+						li.menu-hb__item
+							a(href="#").menu-hb__link Рубашечные
+					ul.header-bottom__menu.menu-hb
+						li.menu-hb__item
+							a(href="#").menu-hb__link Нитки
+						li.menu-hb__item
+							a(href="#").menu-hb__link Кружево
+						li.menu-hb__item
+							a(href="#").menu-hb__link Пуговицы
+						li.menu-hb__item
+							a(href="#").menu-hb__link Резинка
+						li.menu-hb__item
+							a(href="#").menu-hb__link Косая бейка
+						li.menu-hb__item
+							a(href="#").menu-hb__link Швейные принадлежности
+						li.menu-hb__item
+							a(href="#").menu-hb__link Кнопки
+						li.menu-hb__item
+							a(href="#").menu-hb__link Ленты
+						li.menu-hb__item
+							a(href="#").menu-hb__link Клеевые материалы
+						li.menu-hb__item
+							a(href="#").menu-hb__link Булавки
+						li.menu-hb__item
+							a(href="#").menu-hb__link Пряжки
+						li.menu-hb__item
+							a(href="#").menu-hb__link Трикотажная фурнитура
+						li.menu-hb__item
+							a(href="#").menu-hb__link Декоры для одежды
+						li.menu-hb__item
+							a(href="#").menu-hb__link Шнуры
 
 
 

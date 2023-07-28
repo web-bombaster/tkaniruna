@@ -53,3 +53,23 @@
         }
     }
 }
+
+.burger__menu-btn.mobile-menu-btn {
+    padding: 0;
+    min-width: 24px;
+    background-color: transparent;
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+    }
+    
+    span {
+        left: 2px;
+        background-color: var(--grey900);
+
+        &::before, &::after {
+            background-color: var(--grey900);
+        }
+    }
+}

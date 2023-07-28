@@ -6,6 +6,7 @@ document.addEventListener(
 		// include './myscripts/catalog-menu.js'
 		// include './myscripts/options.js'
 		// include './myscripts/initSwiper.js'
+		// include './myscripts/mobileMenuPanel.js'
 
 		// include './myscripts/preloader.js'
 		// include './myscripts/form.js'

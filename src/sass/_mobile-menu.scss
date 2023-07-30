@@ -102,10 +102,13 @@
 .dropdown {
 }
 .mob-menu__link {
-    border-bottom: 1px solid var(--grey300);
     padding: 16px 58px 16px 30px;
+
     display: flex;
+    align-items: center;
     gap: 12px;
+
+    border-bottom: 1px solid var(--grey300);
 
     @media screen and (max-width: $b_480px) {
         padding-left: 15px;
@@ -160,7 +163,10 @@
 }
 
 .mob-submenu__link {
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 58px 8px 30px;
 
     font-size: 16px;
@@ -203,4 +209,13 @@
         }
     }
 
+}
+
+.mob-submenu__item {
+
+}
+
+.mob-submenu__icon {
+    height: 24px;
+    width: auto;
 }

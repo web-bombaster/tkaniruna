@@ -15,3 +15,9 @@
 }
 .b02-bottom {
 }
+
+.buyers-choice {
+    @media screen and (max-width: $b_768px) {
+        display: none;
+    }
+}

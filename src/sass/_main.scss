@@ -43,7 +43,9 @@ body {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 
-	
+	@media screen and (max-width: $b_1024px) {
+		padding-top: 52px;
+	}
 
 	&.toggle {
 		height: 100vh;

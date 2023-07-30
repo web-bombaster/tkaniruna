@@ -86,6 +86,7 @@
     left: 0;
 
     background-color: #fff;
+    box-shadow: 0px 0px 3px var(--grey200);
 
     .options-type.toggle & {
         display: block;

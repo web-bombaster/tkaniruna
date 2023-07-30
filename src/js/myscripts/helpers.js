@@ -71,6 +71,7 @@ let elementToggle = function(element) {
 };
 
 elementToggle('.product-slide__favorite');
+elementToggle('.mobile-menu .dropdown');
 
 
 // Переключатель класса toggle у элемента по клику на другом элементе. Параметры - класс элемента по которому кликаем и класс элемента, которому переключаем класс toggle

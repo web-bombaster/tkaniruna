@@ -6,81 +6,490 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="/fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
     <link href="css/main.min.css" rel="stylesheet">
     <script src="js/scripts.min.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="visible" id="preloader"></div>
-      <header class="header">
-        <div class="header-top">
-          <div class="header-top__container container">
-            <div class="location">
-              <div class="location-select">Ростов-на-Дону</div>
+      <header class="header b-indent">
+        <div class="header__container container">
+          <div class="header-top">
+            <div class="header-top__container container">
+              <div class="location">
+                <div class="location-select">Ростов-на-Дону</div>
+              </div>
+              <ul class="top-menu">
+                <li class="top-menu__item"><a class="top-menu__link" href="#">Доставка</a></li>
+                <li class="top-menu__item"><a class="top-menu__link" href="#">Схемы и выкройки</a></li>
+                <li class="top-menu__item"><a class="top-menu__link" href="#">Акции</a></li>
+                <li class="top-menu__item"><a class="top-menu__link" href="#">Подарочные сертификаты</a></li>
+                <li class="top-menu__item"><a class="top-menu__link" href="#">Анкета для предоставления образцов</a></li>
+                <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
+              </ul>
             </div>
-            <ul class="top-menu">
-              <li class="top-menu__item"><a class="top-menu__link" href="#">Доставка</a></li>
-              <li class="top-menu__item"><a class="top-menu__link" href="#">Схемы и выкройки</a></li>
-              <li class="top-menu__item"><a class="top-menu__link" href="#">Акции</a></li>
-              <li class="top-menu__item"><a class="top-menu__link" href="#">Подарочные сертификаты</a></li>
-              <li class="top-menu__item"><a class="top-menu__link" href="#">Анкета для предоставления образцов</a></li>
-              <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
-            </ul>
           </div>
-        </div>
-        <div class="header-middle">
-          <div class="header-middle__container container"><a class="logo" href="#"><img class="logo__img" src="img/icons/logo.svg" alt="" height="28" width="104"></a>
-            <button class="btn btn__catalog-menu js-burger burger__menu-btn catalog-menu__btn"><span></span>Каталог</button>
-            <div class="search">
-              <div class="options-type options-type__search">
-                <div class="options-type__current">
-                  <div class="title">Везде</div>
-                  <div class="icon"></div>
+          <div class="header-middle">
+            <div class="header-middle__container container"><a class="logo" href="#"><img class="logo__img" src="img/icons/logo.svg" alt="" height="28" width="104"></a>
+              <button class="btn btn__catalog-menu js-burger burger__menu-btn catalog-menu__btn"><span></span>Каталог</button>
+              <div class="search">
+                <div class="options-type options-type__search">
+                  <div class="options-type__current">
+                    <div class="title">Везде</div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="options-type__variants">
+                    <div class="variants-item">Везде</div>
+                    <div class="variants-item">В тканях</div>
+                    <div class="variants-item">В фурнитуре</div>
+                  </div>
                 </div>
-                <div class="options-type__variants">
-                  <div class="variants-item">Везде</div>
-                  <div class="variants-item">В тканях</div>
-                  <div class="variants-item">В фурнитуре</div>
+                <form class="search-form" action="/search" method="GET">
+                  <input class="search-field" type="search" name="search" placeholder="Искать в магазине">
+                  <button class="btn-search" type="submit" aria-label="Найти"> </button>
+                </form>
+              </div>
+              <div class="user"><a class="user-item user__account" href="">Профиль</a><a class="user-item user__favourites" href="">Избранное</a><a class="user-item user__cart" href="">Корзина</a></div>
+              <button class="mobile-menu-btn burger__menu-btn js-burger jsMobileMenuBtnToggle"><span></span></button>
+            </div>
+          </div>
+          <div class="panel-menu">
+            <div class="panel-menu__container container">
+              <div class="panel-menu__box">
+                <div class="catalog-menu">
+                  <ul class="catalog-menu__list">
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">%Скидки</a></li>
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Вид</a>
+                      <ul class="catalog-submenu">
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Бельевые</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Блузочные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Верхняя одежда</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Вечерние</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Эксклюзивные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Детские</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Для дома</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Костюмные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Плательные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Подкладочные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Рубашечные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Спортивные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Сценические</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Рисунок</a>
+                      <ul class="catalog-submenu">
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">ЗигЗаг</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Индийские Огурцы (Пейсли)</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Круги</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Лица</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Надписи</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Объёмный рисунок</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пятна</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Абстракция</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Буквы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Веточки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Вкусняшки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Геометрия</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Горох</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Горошки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Градиент</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Граффити</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Гусиная Лапка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Детские</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Звезды</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Звериные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Зверушки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Зебра</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Камуфляж</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Капли</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Клетка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Леопард</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Листики</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Насекомые</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Новогодние</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Огурцы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Полоска</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Предметы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Птицы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Птички</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пшено</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пятна</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Растительные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Сердечки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Спорт</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Съедобные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Транспорт</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Узор</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Фрукты</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Цветочки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Цветы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Цепи</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Человечки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Штрихи</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Ягодки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Ёлочка</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Цвет</a>
+                      <ul class="catalog-submenu">
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/01.svg" alt="">Белый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/02.svg" alt="">Оранжевый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/03.svg" alt="">Коричневый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/04.svg" alt="">Синий</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/05.svg" alt="">Чёрный</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/06.svg" alt="">Светлый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/07.svg" alt="">Коралловый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/08.svg" alt="">Фуксия</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/09.svg" alt="">Зелёный</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/10.svg" alt="">Мультиколор</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/11.svg" alt="">Бежевый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/12.svg" alt="">Розовый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/13.svg" alt="">Бордовый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/14.svg" alt="">Бирюзовый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/15.svg" alt="">Чёрно-белый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/16.svg" alt="">Нюдовый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/17.svg" alt="">Красный</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/18.svg" alt="">Фиолетовый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/19.svg" alt="">Хаки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/20.svg" alt="">Жёлтый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/21.svg" alt="">Терракотовый</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/22.svg" alt="">Голубой</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#"><img class="catalog-submenu__icon" src="img/icons/colors/23.svg" alt="">Серый</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">По алфавиту</a>
+                      <ul class="catalog-submenu">
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Атлас</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Бархат</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Бифлекс</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Букле</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Вельвет</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Велюр</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Вискоза</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Вуаль</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Джерси</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Джинс</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Жаккард</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Замша</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Кожа</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Костюмные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Котон</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Креп</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Кружево</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Купра</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Курточная ткань</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Лайкра</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Лён</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Марлевка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Мех</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Муслин</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Неопрен</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Органза</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пайетки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пальтовые</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Парча</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Плательные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Плащевка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Подкладочные</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Поплин</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Прошва</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Сатин</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Сетка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Сорочечная</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Тафта</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Твид</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Твил</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Тенсель</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Ткани Италии</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотаж</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотаж бельевой</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотаж вязаный</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотаж Кашкорсе</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотаж лапша</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотаж масло</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Утеплитель</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Фатин</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Фланель</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Флис</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Футер</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Хлопок</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Шелк искусственный</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Шёлк натуральный</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Шифон</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Штапель</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Фурнитура</a>
+                      <ul class="catalog-submenu">
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Клеевые материалы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Нитки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Кружево</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пуговицы</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Резинка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Косая бейка</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Швейные принадлежности</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Кнопки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Ленты</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Булавки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Пряжки</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Трикотажная фурнитура</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Декоры для одежды</a></li>
+                        <li class="catalog-submenu__item"><a class="catalog-submenu__link" href="#">Шнуры</a></li>
+                      </ul>
+                    </li>
+                    <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Условия доставки</a></li>
+                  </ul>
                 </div>
               </div>
-              <form class="search-form" action="/search" method="GET">
-                <input class="search-field" type="search" name="search" placeholder="Искать в магазине">
-                <button class="btn-search" type="submit" aria-label="Найти"> </button>
-              </form>
             </div>
-            <div class="user"><a class="user-item user__account" href="">Александр</a><a class="user-item user__favourites" href="">Избранное</a><a class="user-item user__cart" href="">Корзина</a></div>
           </div>
-        </div>
-        <div class="header-bottom">
-          <div class="header-bottom__container container">
-            <div class="header-bottom__toggle toggle-hb">
-              <div class="options-type options-type__toggle-hb">
-                <div class="options-type__current">
-                  <div class="title">Ткани</div>
-                  <div class="icon"></div>
-                </div>
-                <div class="options-type__variants">
-                  <div class="variants-item">Ткани</div>
-                  <div class="variants-item">Фурнитура</div>
+          <div class="header-bottom">
+            <div class="header-bottom__container container">
+              <div class="header-bottom__toggle toggle-hb">
+                <div class="options-type options-type__toggle-hb">
+                  <div class="options-type__current">
+                    <div class="title">Ткани</div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="options-type__variants">
+                    <div class="variants-item">Ткани</div>
+                    <div class="variants-item">Фурнитура</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="header-bottom__menu">
-              <ul class="header-bottom__menu menu-hb">
-                <li class="menu-hb__item"><a class="menu-hb__link" href="#">Блузочные</a><a class="menu-hb__link" href="#">Костюмные</a><a class="menu-hb__link" href="#">Спортивные</a><a class="menu-hb__link" href="#">Сценические</a><a class="menu-hb__link" href="#">Подкладочные</a><a class="menu-hb__link" href="#">Бельевые</a><a class="menu-hb__link" href="#">Плательные</a><a class="menu-hb__link" href="#">Детские</a><a class="menu-hb__link" href="#">Для дома</a><a class="menu-hb__link" href="#">Верхняя одежда</a><a class="menu-hb__link" href="#">Вечерние</a><a class="menu-hb__link" href="#">Эксклюзивные</a><a class="menu-hb__link" href="#">Рубашечные</a></li>
-              </ul>
-              <ul class="header-bottom__menu menu-hb">
-                <li class="menu-hb__item"><a class="menu-hb__link" href="#">Нитки</a><a class="menu-hb__link" href="#">Кружево</a><a class="menu-hb__link" href="#">Пуговицы</a><a class="menu-hb__link" href="#">Резинка</a><a class="menu-hb__link" href="#">Косая бейка</a><a class="menu-hb__link" href="#">Швейные принадлежности</a><a class="menu-hb__link" href="#">Кнопки</a><a class="menu-hb__link" href="#">Ленты</a><a class="menu-hb__link" href="#">Клеевые материалы</a><a class="menu-hb__link" href="#">Булавки</a><a class="menu-hb__link" href="#">Пряжки</a><a class="menu-hb__link" href="#">Трикотажная фурнитура</a><a class="menu-hb__link" href="#">Декоры для одежды</a><a class="menu-hb__link" href="#">Шнуры</a></li>
-              </ul>
+              <div class="header-bottom-menu">
+                <ul class="header-bottom__menu menu-hb">
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Блузочные</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Костюмные</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Спортивные</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Сценические</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Подкладочные</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Бельевые</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Плательные</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Детские</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Для дома</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Верхняя одежда</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Вечерние</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Эксклюзивные</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Рубашечные</a></li>
+                </ul>
+                <ul class="header-bottom__menu menu-hb">
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Нитки</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Кружево</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Пуговицы</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Резинка</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Косая бейка</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Швейные принадлежности</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Кнопки</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Ленты</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Клеевые материалы</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Булавки</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Пряжки</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Трикотажная фурнитура</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Декоры для одежды</a></li>
+                  <li class="menu-hb__item"><a class="menu-hb__link" href="#">Шнуры</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </header>
+      <div class="mb01">
+        <div class="mb01__container container">
+          <h1 class="mb01__title b-title">Магазин тканей и фурнитуры</h1>
+          <div class="mb01__descr b-descr">Ежедневное пополнение склада новинками с самыми популярными расцветками и принтами</div><a class="mb01__btn btn" href="#">Перейти в каталог</a>
+        </div>
+      </div>
+      <div class="mb02">
+        <ul class="mob-menu">
+          <li class="mob-menu__item dropdown"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/01.png" alt="">Ткани</a>
+            <ul class="mob-submenu">
+              <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По алфавиту</a>
+                <ul class="mob-submenu">
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Атлас</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Бархат</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Бифлекс</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Букле</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вельвет</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Велюр</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вискоза</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вуаль</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Джерси</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Джинс</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Жаккард</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Замша</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кожа</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Костюмные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Котон</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Креп</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кружево</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Купра</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Курточная ткань</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Лайкра</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Лён</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Марлевка</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Мех</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Муслин</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Неопрен</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Органза</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пайетки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пальтовые</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Парча</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Плательные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Плащевка</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Подкладочные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Поплин</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Прошва</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сатин</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сетка</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сорочечная</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Тафта</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Твид</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Твил</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Тенсель</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ткани Италии</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж бельевой</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж вязаный</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж Кашкорсе</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж лапша</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж масло</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Утеплитель</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Фатин</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Фланель</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Флис</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Футер</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Хлопок</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шелк искусственный</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шёлк натуральный</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шифон</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Штапель</a></li>
+                </ul>
+              </li>
+              <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По виду</a>
+                <ul class="mob-submenu">
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Бельевые</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Блузочные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Верхняя одежда</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вечерние</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Эксклюзивные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Детские</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Для дома</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Костюмные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Плательные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Подкладочные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Рубашечные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Спортивные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сценические</a></li>
+                </ul>
+              </li>
+              <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По рисунку</a>
+                <ul class="mob-submenu">
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">ЗигЗаг</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Индийские Огурцы (Пейсли)</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Круги</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Лица</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Надписи</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Объёмный рисунок</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пятна</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Абстракция</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Буквы</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Веточки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вкусняшки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Геометрия</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Горох</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Горошки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Градиент</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Граффити</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Гусиная Лапка</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Детские</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Звезды</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Звериные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Зверушки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Зебра</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Камуфляж</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Капли</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Клетка</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Леопард</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Листики</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Насекомые</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Новогодние</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Огурцы</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Полоска</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Предметы</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Птицы</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Птички</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пшено</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пятна</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Растительные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сердечки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Спорт</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Съедобные</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Транспорт</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Узор</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Фрукты</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Цветочки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Цветы</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Цепи</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Человечки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Штрихи</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ягодки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ёлочка</a></li>
+                </ul>
+              </li>
+              <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По цвету</a>
+                <ul class="mob-submenu">
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/01.svg" alt="">Белый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/02.svg" alt="">Оранжевый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/03.svg" alt="">Коричневый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"> <img class="mob-submenu__icon" src="img/icons/colors/04.svg" alt="">Синий</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"> <img class="mob-submenu__icon" src="img/icons/colors/05.svg" alt="">Чёрный</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/06.svg" alt="">Светлый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/07.svg" alt="">Коралловый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/08.svg" alt="">Фуксия</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/09.svg" alt="">Зелёный</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/10.svg" alt="">Мультиколор</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/11.svg" alt="">Бежевый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"> <img class="mob-submenu__icon" src="img/icons/colors/12.svg" alt="">Розовый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/13.svg" alt="">Бордовый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/14.svg" alt="">Бирюзовый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/15.svg" alt="">Чёрно-белый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/16.svg" alt="">Нюдовый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/17.svg" alt="">Красный</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/18.svg" alt="">Фиолетовый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/19.svg" alt="">Хаки</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/20.svg" alt="">Жёлтый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/21.svg" alt="">Терракотовый</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/22.svg" alt="">Голубой</a></li>
+                  <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/23.svg" alt="">Серый</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="mob-menu__item"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/02.png" alt="">Эксклюзивно</a></li>
+          <li class="mob-menu__item"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/03.svg" alt="">Выбор покупателей</a></li>
+          <li class="mob-menu__item dropdown"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/04.png" alt="">Фурнитура</a>
+            <ul class="mob-submenu">
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Клеевые материалы</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Нитки</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кружево</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пуговицы</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Резинка</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Косая бейка</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Швейные принадлежности</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кнопки</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ленты</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Булавки</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пряжки</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотажная фурнитура</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Декоры для одежды</a></li>
+              <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шнуры</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
       <!-- доделать добавление в избранное-->
-      <div class="b02 b-indent jsFavorite">
+      <div class="b02 b-indent buyers-choice jsFavorite">
         <div class="b02__container container">
           <div class="b02__top b-top">
             <div class="b04__title b-title">Выбор покупателей</div><a class="b-top__readmore" href="#">Посмотреть все товары</a>
@@ -353,6 +762,209 @@
           </div>
         </div>
       </footer>
+      <div class="mobile-menu">
+        <div class="mobile-menu__wrapper">
+          <ul class="mobile-menu__big mob-menu">
+            <li class="mob-menu__item dropdown"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/01.png" alt="">Ткани</a>
+              <ul class="mob-submenu">
+                <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По алфавиту</a>
+                  <ul class="mob-submenu">
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Атлас</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Бархат</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Бифлекс</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Букле</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вельвет</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Велюр</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вискоза</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вуаль</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Джерси</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Джинс</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Жаккард</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Замша</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кожа</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Костюмные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Котон</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Креп</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кружево</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Купра</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Курточная ткань</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Лайкра</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Лён</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Марлевка</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Мех</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Муслин</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Неопрен</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Органза</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пайетки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пальтовые</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Парча</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Плательные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Плащевка</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Подкладочные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Поплин</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Прошва</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сатин</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сетка</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сорочечная</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Тафта</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Твид</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Твил</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Тенсель</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ткани Италии</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж бельевой</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж вязаный</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж Кашкорсе</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж лапша</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотаж масло</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Утеплитель</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Фатин</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Фланель</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Флис</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Футер</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Хлопок</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шелк искусственный</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шёлк натуральный</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шифон</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Штапель</a></li>
+                  </ul>
+                </li>
+                <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По виду</a>
+                  <ul class="mob-submenu">
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Бельевые</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Блузочные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Верхняя одежда</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вечерние</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Эксклюзивные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Детские</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Для дома</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Костюмные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Плательные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Подкладочные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Рубашечные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Спортивные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сценические</a></li>
+                  </ul>
+                </li>
+                <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По рисунку</a>
+                  <ul class="mob-submenu">
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">ЗигЗаг</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Индийские Огурцы (Пейсли)</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Круги</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Лица</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Надписи</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Объёмный рисунок</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пятна</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Абстракция</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Буквы</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Веточки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Вкусняшки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Геометрия</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Горох</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Горошки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Градиент</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Граффити</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Гусиная Лапка</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Детские</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Звезды</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Звериные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Зверушки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Зебра</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Камуфляж</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Капли</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Клетка</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Леопард</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Листики</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Насекомые</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Новогодние</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Огурцы</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Полоска</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Предметы</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Птицы</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Птички</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пшено</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пятна</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Растительные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Сердечки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Спорт</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Съедобные</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Транспорт</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Узор</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Фрукты</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Цветочки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Цветы</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Цепи</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Человечки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Штрихи</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ягодки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ёлочка</a></li>
+                  </ul>
+                </li>
+                <li class="mob-submenu__item dropdown"><a class="mob-submenu__link" href="#">По цвету</a>
+                  <ul class="mob-submenu">
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/01.svg" alt="">Белый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/02.svg" alt="">Оранжевый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/03.svg" alt="">Коричневый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"> <img class="mob-submenu__icon" src="img/icons/colors/04.svg" alt="">Синий</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"> <img class="mob-submenu__icon" src="img/icons/colors/05.svg" alt="">Чёрный</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/06.svg" alt="">Светлый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/07.svg" alt="">Коралловый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/08.svg" alt="">Фуксия</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/09.svg" alt="">Зелёный</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/10.svg" alt="">Мультиколор</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/11.svg" alt="">Бежевый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"> <img class="mob-submenu__icon" src="img/icons/colors/12.svg" alt="">Розовый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/13.svg" alt="">Бордовый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/14.svg" alt="">Бирюзовый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/15.svg" alt="">Чёрно-белый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/16.svg" alt="">Нюдовый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/17.svg" alt="">Красный</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/18.svg" alt="">Фиолетовый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/19.svg" alt="">Хаки</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/20.svg" alt="">Жёлтый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/21.svg" alt="">Терракотовый</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/22.svg" alt="">Голубой</a></li>
+                    <li class="mob-submenu__item"><a class="mob-submenu__link" href="#"><img class="mob-submenu__icon" src="img/icons/colors/23.svg" alt="">Серый</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/02.png" alt="">Эксклюзивно</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/03.svg" alt="">Выбор покупателей</a></li>
+            <li class="mob-menu__item dropdown"><a class="mob-menu__link" href="#"><img class="mob-menu__icon" src="img/icons/mob-menu-items/04.png" alt="">Фурнитура</a>
+              <ul class="mob-submenu">
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Клеевые материалы</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Нитки</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кружево</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пуговицы</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Резинка</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Косая бейка</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Швейные принадлежности</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Кнопки</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Ленты</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Булавки</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Пряжки</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Трикотажная фурнитура</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Декоры для одежды</a></li>
+                <li class="mob-submenu__item"><a class="mob-submenu__link" href="#">Шнуры</a></li>
+              </ul>
+            </li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="#">Новинки</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="#">Скидки</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="#">Схемы и выкройки</a></li>
+          </ul>
+          <ul class="mobile-menu__mini">
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Условия возврата</a></li>
+            <li><a href="#">Подарочные сертификаты</a></li>
+            <li><a href="#">Анкета для предоставления образцов</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul><a class="mobile-menu__phone" href="tel:+78002503255">8 (800) 250-32-55</a>
+          <div class="mobile-menu__social">
+            <div class="socials"><a class="socials__item" href="#"><img src="../../img/icons/social-01.svg" alt=""></a><a class="socials__item" href="#"><img src="../../img/icons/social-02.svg" alt=""></a></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

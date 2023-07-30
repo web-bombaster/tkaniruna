@@ -12,6 +12,12 @@
         position: fixed;
         padding-top: 0;
     }
+
+    &.b-indent {
+        @media screen and (max-width: $b_1024px) {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .header__container {

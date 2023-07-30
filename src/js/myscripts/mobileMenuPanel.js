@@ -29,7 +29,8 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
     
             if (menuActive) {
                 menuActive.style.height = heightMenuOverlay + 'px';
-                menuActive.style.top = posTop + heightHeader + 'px';
+                // menuActive.style.top = posTop + heightHeader + 'px';
+                menuActive.style.top = posTop + 'px';
             };
         };
     

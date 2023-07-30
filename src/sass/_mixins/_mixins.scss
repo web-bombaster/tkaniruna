@@ -44,6 +44,11 @@
     line-height: 1.2;
 }
 
+@mixin visually-hidden {
+	position: fixed;
+	transform: scale(0);
+}
+
 @mixin h3 {
     font-size: 20px;
     font-weight: 500;

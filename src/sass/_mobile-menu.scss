@@ -147,7 +147,12 @@
                 left: 15px;
             }
         }
+
+        & > img {
+            display: none;
+        }
     }
+
 }
 
 .mobile-menu .socials {

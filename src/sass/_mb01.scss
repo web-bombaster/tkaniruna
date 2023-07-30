@@ -1,0 +1,47 @@
+.mb01 {
+	// display: none;
+	@include visually-hidden;
+
+	padding-top: 44px;
+	padding-bottom: 52px;
+
+	text-align: center;
+
+	background-color: var(--grey200);
+
+	@media screen and (max-width: $b_1024px) {
+		// display: block;
+		transform: none;
+		position: relative;
+	}
+
+	@media screen and (max-width: $b_768px) {
+		padding-top: 24px;
+		padding-bottom: 32px;
+	}
+}
+.mb01__container {
+
+}
+.mb01__title {
+	&.b-title {
+		margin-top: 0;
+		margin-bottom: 16px;
+		max-width: 100%;
+
+		@media screen and (max-width: $b_768px) {
+			@include h2_mob;
+			line-height: 1.2;
+		}
+	}
+}
+.mb01__descr {
+	margin-bottom: 16px;
+
+	.b-descr {
+		@include text_mob;
+	}
+}
+.mb01__btn {
+	font-size: 12px;
+}

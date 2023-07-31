@@ -1,0 +1,19 @@
+
+.breadcrumbs(itemscope='', itemtype='http://data-vocabulary.org/Breadcrumb')
+	.container.breadcrumbs__container
+
+		a(href="#").breadcrumbs__back Назад
+
+		///| Вы здесь:&#32;
+		a(href='#', itemprop='url').breadcrumbs__link
+			span(itemprop='title') Главная
+		| 	 / 
+		a(href='#', itemprop='url').breadcrumbs__link
+			span(itemprop='title') Каталог
+		| 	 / 
+		a(href='#', itemprop='url').breadcrumbs__link
+			span(itemprop='title') Ткани
+		| 	 / 
+		span(itemprop='title').breadcrumbs__text Бархат
+
+		//Главная / Распродажа / Специальная цена на выставочные образцы

@@ -3,8 +3,12 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'index';
+- var pageType = 'catalog';
 
+
+//- catalog - страница каталога
+if pageType === 'catalog'
+	include catalog
 
 //- home - главная страница
 if pageType === 'home'
@@ -14,3 +18,16 @@ if pageType === 'home'
 if pageType === 'index'
 	include verstka
 
+
+
+//- глюк - в слайдерах точки не переключают слайды
+//- таббар
+//- валидация форм
+//- лизи лоад карты и не только
+//- кнопка наверх
+
+
+//- Комментарии
+//- Вопрос по слайдеру
+//- В мобильном меню мливаются пункты третьего уровня со вторым
+//- Таббар сливается с блоками с темным фоном

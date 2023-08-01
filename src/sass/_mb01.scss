@@ -9,13 +9,13 @@
 
 	background-color: var(--grey200);
 
-	@media screen and (max-width: $b_1024px) {
+	@media screen and (max-width: $b1024) {
 		// display: block;
 		transform: none;
 		position: relative;
 	}
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		padding-top: 24px;
 		padding-bottom: 32px;
 	}
@@ -29,7 +29,7 @@
 		margin-bottom: 16px;
 		max-width: 100%;
 
-		@media screen and (max-width: $b_768px) {
+		@media screen and (max-width: $b768) {
 			@include h2_mob;
 			line-height: 1.2;
 		}

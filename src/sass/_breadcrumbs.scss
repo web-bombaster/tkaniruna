@@ -1,6 +1,12 @@
 .breadcrumbs {
+	position: relative;
+	z-index: 0;
 	margin-top: 24px;
 	margin-bottom: 22px;
+
+	@media screen and (max-width: $b768) {
+		display: none;
+	}
 
 	a, a span {
 		@include text_2;

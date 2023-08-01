@@ -33,6 +33,9 @@
 @import "_form";
 @import "_b07";
 @import "_b08";
+@import "_catalog";
+@import "_filter";
+@import "_mobile-filter";
 @import "_footer";
 @import "_mobile-menu";
 @import "_socials";
@@ -46,3 +49,5 @@
 // Библиотеки и их кастомизация
 @import "../libs/swiper-bundle.min";
 @import "_b01";
+@import "../libs/nouislider.min";
+@import "_range";

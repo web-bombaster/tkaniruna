@@ -9,7 +9,7 @@
     <link href="css/main.min.css" rel="stylesheet">
     <script src="js/scripts.min.js" defer></script>
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
       <div class="visible" id="preloader"></div>
       <header class="header">
@@ -304,11 +304,11 @@
         <div class="b08">
           <div class="b08__container container">
             <div class="b08-box">
-              <div class="b08-box__left b08-left">
+              <div class="b08-box__left b08-left"><a class="b08-left__back" href="#"></a>
                 <h1 class="b08-left__title">Бархат</h1>
-                <div class="b08-left__count">18 товаров</div>
+                <div class="b08-left__count">18 <span>товаров</span></div>
               </div>
-              <div class="b08-box__right b08-right">Сортировать
+              <div class="b08-box__right b08-right"><span>Сортировать</span>
                 <div class="options-type options-type__b08-right">
                   <div class="options-type__current">
                     <div class="title">Сначала популярные</div>
@@ -320,6 +320,495 @@
                     <div class="variants-item">По цене (сначала дешёвые)</div>
                     <div class="variants-item">По цене (сначала дорогие)</div>
                   </div>
+                </div>
+                <button class="b08-right__filter active jsFilterToggle"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog">
+          <div class="catalog__container container">
+            <div class="catalog__filter filter">
+              <form class="filter__form">
+                <button class="filter__btn-reset" type="reset">Сбросить все фильтры</button>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Цена</legend>
+                  <div class="range">
+                    <div class="range__values">
+                      <input class="filter__input-text range__input range__input--min" type="text" data-value="322" placeholder="от 322">
+                      <input class="filter__input-text range__input range__input--max" type="text" data-value="4300" placeholder="до 4300">
+                    </div>
+                    <div class="range__slider-wrapper">
+                      <div class="range__slider"></div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Цвет</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/01.svg" alt=""><span class="filter__checkbox-title">Белый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/02.svg" alt=""><span class="filter__checkbox-title">Оранжевый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/03.svg" alt=""><span class="filter__checkbox-title">Коричневый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/04.svg" alt=""><span class="filter__checkbox-title">Синий</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/05.svg" alt=""><span class="filter__checkbox-title">Чёрный</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/06.svg" alt=""><span class="filter__checkbox-title">Светлый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/07.svg" alt=""><span class="filter__checkbox-title">Коралловый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/08.svg" alt=""><span class="filter__checkbox-title">Фуксия</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/09.svg" alt=""><span class="filter__checkbox-title">Зелёный</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/10.svg" alt=""><span class="filter__checkbox-title">Мультиколор</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/11.svg" alt=""><span class="filter__checkbox-title">Бежевый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/12.svg" alt=""><span class="filter__checkbox-title">Розовый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/13.svg" alt=""><span class="filter__checkbox-title">Бордовый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/14.svg" alt=""><span class="filter__checkbox-title">Бирюзовый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/15.svg" alt=""><span class="filter__checkbox-title">Чёрно-белый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/16.svg" alt=""><span class="filter__checkbox-title">Нюдовый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/17.svg" alt=""><span class="filter__checkbox-title">Красный</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/18.svg" alt=""><span class="filter__checkbox-title">Фиолетовый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/19.svg" alt=""><span class="filter__checkbox-title">Хаки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/20.svg" alt=""><span class="filter__checkbox-title">Жёлтый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/21.svg" alt=""><span class="filter__checkbox-title">Терракотовый</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/22.svg" alt=""><span class="filter__checkbox-title">Голубой</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><img class="filter__checkbox-icon" src="img/icons/colors/23.svg" alt=""><span class="filter__checkbox-title">Серый</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Вид</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Бельевые</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Блузочные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Верхняя одежда</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Вечерние</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Эксклюзивные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Детские</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Для дома</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Костюмные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Плательные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Подкладочные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Рубашечные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Спортивные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Сценические</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Состав</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Вискоза</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Люрекс</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Нейлон</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Полиэстер</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Вискоза</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Люрекс</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Нейлон</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Полиэстер</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Плотность</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Очень тонкая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Тонкая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Средняя</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Плотная</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Очень тонкая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Тонкая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Средняя</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Плотная</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Рисунок</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">ЗигЗаг</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Индийские Огурцы (Пейсли)</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Круги</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Лица</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Надписи</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Объёмный рисунок</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Пятна</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Абстракция</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Буквы</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Веточки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Вкусняшки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Геометрия</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Горох</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Горошки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Градиент</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Граффити</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Гусиная Лапка</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Детские</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Звезды</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Звериные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Зверушки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Зебра</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Камуфляж</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Капли</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Клетка</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Леопард</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Листики</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Насекомые</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Новогодние</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Огурцы</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Полоска</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Предметы</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Птицы</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Птички</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Пшено</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Пятна</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Растительные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Сердечки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Спорт</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Съедобные</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Транспорт</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Узор</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Фрукты</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Цветочки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Цветы</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Цепи</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Человечки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Штрихи</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Ягодки</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Ёлочка</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Жёсткость</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Очень мягкая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Мягкая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Средняя</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend">Поверхность</legend>
+                  <div class="filter__box-checkbox">
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">3D</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Бархатистая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Блестящая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Ворсовая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">3D</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Бархатистая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Блестящая</span>
+                                </label>
+                                <label class="filter__label">
+                                  <input class="filter__checkbox" type="checkbox"><span class="filter__checkbox-title">Ворсовая</span>
+                                </label>
+                  </div>
+                </fieldset>
+                <div class="filter__box-btn">
+                  <button class="btn filter__btn" type="submit">Применить</button>
+                  <button class="btn filter__btn-light filter__btn" type="reset">Сбросить все фильтры</button>
+                </div>
+              </form>
+            </div>
+            <div class="catalog__content">
+              <div class="products-inner">
+                <div class="products-box"><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/01.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат GLOSS</div>
+                    <div class="product-slide__descr">15 цветов</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">360 р.<span class="old-price">400 р.</span></div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/02.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат BARSELONA</div>
+                    <div class="product-slide__descr">25 цветов</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">540 р.<span class="old-price">980 р.</span></div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/03.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат REIS</div>
+                    <div class="product-slide__descr">5 цветов</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">2374 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/04.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат Чернильный</div>
+                    <div class="product-slide__descr">1 цвет</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">1652 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/05.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат Well</div>
+                    <div class="product-slide__descr">14 цветов</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">467 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/06.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат TELL</div>
+                    <div class="product-slide__descr">6 цветов</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">654 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/07.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат ROSSO</div>
+                    <div class="product-slide__descr">5 цветов</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">540 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/08.jpg" alt="">
+                      <div class="product-slide__text"><span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат ADRIC DG</div>
+                    <div class="product-slide__descr">1 цвет</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">694 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a><a class="product-slide" href="#">
+                    <div class="product-slide__box"><img class="product-slide__img" src="img/content/catalog-list-products/09.jpg" alt="">
+                      <div class="product-slide__text"> <span>100% п/э</span></div>
+                    </div>
+                    <div class="product-slide__title">Бархат Плиссе 4мм</div>
+                    <div class="product-slide__descr">4 цвета</div>
+                    <div class="product-slide__inner">
+                      <div class="product-slide__price">540 р.</div>
+                      <button class="product-slide__favorite">Избранное</button>
+                    </div></a></div>
+                <div class="text-center">
+                  <div class="btn">Смотреть дальше</div>
                 </div>
               </div>
             </div>
@@ -354,6 +843,31 @@
               </label>
             </div>
           </form>
+        </div>
+      </div>
+      <div class="b05 mobile">
+        <div class="b05__container container">
+          <div class="b05__title b-title">Компания RUNA TEX</div>
+          <div class="b05__box b05-box">
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-01.svg" alt="">
+              <div class="b05-item__title">Масштабы</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-02.svg" alt="">
+              <div class="b05-item__title">Уникальный дизайн</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-03.svg" alt="">
+              <div class="b05-item__title">Производство</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-04.svg" alt="">
+              <div class="b05-item__title">Эксклюзивные ткани</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-05.svg" alt="">
+              <div class="b05-item__title">Гарантии</div>
+            </div>
+            <div class="b05-box__item b05-item"><img class="b05-item__icon" src="img/icons/adv-06.svg" alt="">
+              <div class="b05-item__title">Качество</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="b07">
@@ -632,6 +1146,7 @@
           </div>
         </div>
       </div>
+      <div class="mobile-filter"></div>
       <ul class="tabbar">
         <li class="tabbar__item"><a class="tabbar__link tabbar__link--active" href="#"><img class="tabbar__icon" src="img/icons/tabbar/01.svg" alt="">Главная</a></li>
         <li class="tabbar__item"><a class="tabbar__link" href="#"><img class="tabbar__icon" src="img/icons/tabbar/02.svg" alt="">Каталог</a></li>

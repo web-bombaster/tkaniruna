@@ -1,85 +1,204 @@
 .b08 {
-    margin-bottom: 24px;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 24px;
+
+	@media screen and (max-width: $b768) {
+		margin-bottom: 6px;
+	}
 }
 .b08__container {
+	@media screen and (max-width: $b768) {
+		padding: 0;
+	}
+	@media screen and (max-width: $b480) {
+		padding: 0;
+	}
+	@media screen and (max-width: $b330) {
+		padding: 0;
+	}
 }
 
 .b08-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: $b768) {
+		flex-direction: column;
+	}
 }
 .b08-box__left {
-    display: flex;
-    gap: 12px;
-    align-items: baseline;
+
 }
 .b08-left {
+	display: flex;
+	gap: 12px;
+	align-items: baseline;
+
+	@media screen and (max-width: $b768) {
+		padding: 10px 3rem;
+		width: 100%;
+		
+		align-items: center;
+		justify-content: space-between;
+
+		background-color: var(--grey200);		
+	}
+
+	@media screen and (max-width: $b480) {
+		padding: 10px 1.5rem;
+	}
+}
+.b08-left__back {
+	display: none;
+
+	@media screen and (max-width: $b768) {
+		display: block;
+		height: 24px;
+		width: 24px;
+		background-image: url(../img/icons/arrow-right.svg);
+		background-size: cover;
+		transform: rotate(180deg);
+	}
 }
 .b08-left__title {
-    margin-top: 0;
-    @include h2;
+	margin-top: 0;
+	margin-bottom: 0;
+	@include h2;
+
+	@media screen and (max-width: $b768) {
+		margin-right: auto;
+		@include text_14_mob;
+	}
 }
 .b08-left__count {
-    @include text_2;
-    @include grey700;
+	@include text_2;
+	@include grey700;
+	word-wrap: break-word;
+
+	@media screen and (max-width: $b768) {
+		@include h4_card_mob;
+		@include grey600;
+		span {
+			display: none;
+		}
+	}
 }
 .b08-box__right {
 }
 .b08-right {
-    display: flex;
-    gap: 8px;
-    align-items: baseline;
+	display: flex;
+	gap: 8px;
+	align-items: baseline;
 
-    @include text_2;
+	@include text_2;
+
+	@media screen and (max-width: $b768) {
+		width: 100%;
+		padding: 7px 30px 0;
+		
+		align-items: center;
+
+		span {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: $b480) {
+		padding: 7px 15px 0;
+	}
 }
-.options-type {
-}
-.options-type__b08-right {
-}
-.options-type__current {
-}
-.title {
-}
-.icon {
-}
-.options-type__variants {
-}
-.variants-item {
-}
-.toggle {
-}
+
 
 .b08 {
-    .options-type__current .title {
-        @include text_2;
-        @include grey700;
+	.options-type__current .title {
+		@include text_2;
+		@include grey700;
 
-        background-color: transparent;
-        border-radius: 12px;
-        border: 1px solid var(--grey600);
+		background-color: transparent;
+		border-radius: 12px;
+		border: 1px solid var(--grey600);
 
-        min-width: 278px;
-    }
+		min-width: 278px;
 
-    .options-type__variants {
-        top: 110%;
-        right: 0;
-        left: initial;
+		@media screen and (max-width: $b992) {
+			min-width: auto;
+		}
 
-        color: var(--grey700);
+		@media screen and (max-width: $b768) {
+			border: none;
+			padding-right: 0;
+			padding-left: 32px;
 
-        padding: 0;
-        border: 1px solid var(--grey600);
-        border-radius: 12px;
-    }
+			background-image: url('../img/icons/sorting.svg');
+			background-size: 24px 24px;
+			background-position: left center;
+			background-repeat: no-repeat;
 
-    .variants-item {
-        padding: 8px 12px;
+			&::before {
+				display: none;
+			}
+		}
+	}
 
-        &:not(:last-child) {
-            border-bottom: 1px solid var(--grey600);
-        }
-    }
+	.options-type__variants {
+		top: 110%;
+		right: 0;
+		left: initial;
 
+		color: var(--grey700);
+
+		padding: 0;
+		border: 1px solid var(--grey600);
+		border-radius: 12px;
+
+		@media screen and (max-width: $b768) {
+			left: 0;
+			right: auto;
+		}
+	}
+
+	.variants-item {
+		padding: 8px 12px;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--grey600);
+		}
+	}
+
+}
+
+.b08-right__filter {
+	display: none;
+	position: relative;
+
+	margin-left: auto;
+
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	border: none;
+	background-image: url('../img/icons/filter-mobile-btn.svg');
+	background-size: cover;
+	cursor: pointer;
+
+	@media screen and (max-width: $b768) {
+		display: block;
+	}
+
+	&.active {
+		&::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: -2px;
+			
+			width: 8px;
+			height: 8px;			
+			
+			border-radius: 50%;
+			background-color: #196dff;
+		}
+	}
 }

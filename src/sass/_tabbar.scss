@@ -27,11 +27,11 @@
     opacity: .7;
     font-size: 12px;
     
-    @media screen and (max-width: $b_1024px) {        
+    @media screen and (max-width: $b1024) {        
         display: flex;
     }
 
-    @media screen and (max-width: $b_480px) {        
+    @media screen and (max-width: $b480) {        
         font-size: 10px;
     }
 }

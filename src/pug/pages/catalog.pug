@@ -3,13 +3,18 @@ include ../includes/mixins
 doctype html
 html(lang="ru-RU")
     include ../includes/head
-    body
+    body.body
         .wrapper
             include ../includes/preloader
             include ../includes/header
             include ../includes/breadcrumbs
             main.main
                 include ../includes/b08
+                .catalog
+                    .catalog__container.container
+                        include ../includes/filter
+                        .catalog__content
+                            include ../includes/catalog-list-products
             //- include ../includes/b01
             //- include ../includes/mb01
             //- include ../includes/mb02
@@ -17,11 +22,12 @@ html(lang="ru-RU")
             //- include ../includes/b03
             //- include ../includes/b02-sale
             //- include ../includes/b04
-            //- include ../includes/b05
             include ../includes/b06
+            include ../includes/b05-mobile
             include ../includes/b07
             include ../includes/footer
             include ../includes/mobile-menu
+            include ../includes/mobile-filter
             include ../includes/tabbar
 
 

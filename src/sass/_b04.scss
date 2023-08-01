@@ -7,11 +7,11 @@
 
     // overflow: hidden;
 
-    @media screen and (max-width: $b_1440px) {
+    @media screen and (max-width: $b1440) {
         min-height: auto;
     }
 
-    @media screen and (max-width: $b_992px) {
+    @media screen and (max-width: $b992) {
         display: none;
     }
 }

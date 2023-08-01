@@ -59,7 +59,7 @@
 	border: 1px solid var(--grey000);
 	background-color: transparent;
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		color: var(--grey900);
 		background-color: var(--grey100);
 	}

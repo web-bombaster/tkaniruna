@@ -1,14 +1,14 @@
 @use "sass:math";
 
 // Брейкпоинты
-$b_1440px: 1440px;
-$b_1200px: 1200px;
-$b_1024px: 1024px;
-$b_992px: 992px;
-$b_800px: 800px;
-$b_768px: 768px;
-$b_480px: 480px;
-$b_330px: 330px;
+$b1440: 1440px;
+$b1200: 1200px;
+$b1024: 1024px;
+$b992: 992px;
+$b800: 800px;
+$b768: 768px;
+$b480: 480px;
+$b330: 330px;
 
 
 :root {
@@ -30,17 +30,17 @@ $b_330px: 330px;
 
     // Размеры
     --mainGap: 20px;
-    @media (max-width: $b_1200px) {
+    @media (max-width: $b1200) {
         --mainGap: 10px;
     }
 
     --indentBlocks: 4.8rem;
-    @media (max-width: $b_1200px) {
+    @media (max-width: $b1200) {
         --indentBlocks: 4rem;
     }
 
     --containerPadding: 2rem;
-    @media screen and (max-width: $b_992px) {
+    @media screen and (max-width: $b992) {
         --containerPadding: 1.5rem;
     }
 

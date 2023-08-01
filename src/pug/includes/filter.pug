@@ -1,0 +1,185 @@
+//- +checkbox('', '')
+
+mixin checkbox(title)
+	label.filter__label
+		input(type="checkbox").filter__checkbox
+		span.filter__checkbox-title #{title}
+
+mixin checkboximg(title, src)
+	label.filter__label
+		input(type="checkbox").filter__checkbox
+		img(src="img/icons/colors/"+src, alt="").filter__checkbox-icon
+		span.filter__checkbox-title #{title}
+
+.catalog__filter.filter
+	form.filter__form
+
+		button.filter__btn-reset(type="reset") Сбросить все фильтры
+		
+		fieldset.filter__fieldset
+			legend.filter__legend Цена
+			.range
+				.range__values
+					input.filter__input-text.range__input.range__input--min(type="text" data-value="322" placeholder="от 322")
+					input.filter__input-text.range__input.range__input--max(type="text" data-value="4300" placeholder="до 4300")
+				.range__slider-wrapper
+					.range__slider
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Цвет
+
+			.filter__box-checkbox
+				+checkboximg('Белый', '01.svg')
+				+checkboximg('Оранжевый', '02.svg')
+				+checkboximg('Коричневый', '03.svg')
+				+checkboximg('Синий', '04.svg')
+				+checkboximg('Чёрный', '05.svg')
+				+checkboximg('Светлый', '06.svg')
+				+checkboximg('Коралловый', '07.svg')
+				+checkboximg('Фуксия', '08.svg')
+				+checkboximg('Зелёный', '09.svg')
+				+checkboximg('Мультиколор', '10.svg')
+				+checkboximg('Бежевый', '11.svg')
+				+checkboximg('Розовый', '12.svg')
+				+checkboximg('Бордовый', '13.svg')
+				+checkboximg('Бирюзовый', '14.svg')
+				+checkboximg('Чёрно-белый', '15.svg')
+				+checkboximg('Нюдовый', '16.svg')
+				+checkboximg('Красный', '17.svg')
+				+checkboximg('Фиолетовый', '18.svg')
+				+checkboximg('Хаки', '19.svg')
+				+checkboximg('Жёлтый', '20.svg')
+				+checkboximg('Терракотовый', '21.svg')
+				+checkboximg('Голубой', '22.svg')
+				+checkboximg('Серый', '23.svg')
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Вид
+
+			.filter__box-checkbox
+				+checkbox('Бельевые')
+				+checkbox('Блузочные')
+				+checkbox('Верхняя одежда')
+				+checkbox('Вечерние')
+				+checkbox('Эксклюзивные')
+				+checkbox('Детские')
+				+checkbox('Для дома')
+				+checkbox('Костюмные')
+				+checkbox('Плательные')
+				+checkbox('Подкладочные')
+				+checkbox('Рубашечные')
+				+checkbox('Спортивные')
+				+checkbox('Сценические')
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Состав
+
+			.filter__box-checkbox
+				+checkbox('Вискоза')
+				+checkbox('Люрекс')
+				+checkbox('Нейлон')
+				+checkbox('Полиэстер')
+				+checkbox('Вискоза')
+				+checkbox('Люрекс')
+				+checkbox('Нейлон')
+				+checkbox('Полиэстер')
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Плотность
+
+			.filter__box-checkbox
+				+checkbox('Очень тонкая')
+				+checkbox('Тонкая')
+				+checkbox('Средняя')
+				+checkbox('Плотная')
+				+checkbox('Очень тонкая')
+				+checkbox('Тонкая')
+				+checkbox('Средняя')
+				+checkbox('Плотная')
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Рисунок
+
+			.filter__box-checkbox
+				+checkbox('ЗигЗаг')
+				+checkbox('Индийские Огурцы (Пейсли)')
+				+checkbox('Круги')
+				+checkbox('Лица')
+				+checkbox('Надписи')
+				+checkbox('Объёмный рисунок')
+				+checkbox('Пятна')
+				+checkbox('Абстракция')
+				+checkbox('Буквы')
+				+checkbox('Веточки')
+				+checkbox('Вкусняшки')
+				+checkbox('Геометрия')
+				+checkbox('Горох')
+				+checkbox('Горошки')
+				+checkbox('Градиент')
+				+checkbox('Граффити')
+				+checkbox('Гусиная Лапка')
+				+checkbox('Детские')
+				+checkbox('Звезды')
+				+checkbox('Звериные')
+				+checkbox('Зверушки')
+				+checkbox('Зебра')
+				+checkbox('Камуфляж')
+				+checkbox('Капли')
+				+checkbox('Клетка')
+				+checkbox('Леопард')
+				+checkbox('Листики')
+				+checkbox('Насекомые')
+				+checkbox('Новогодние')
+				+checkbox('Огурцы')
+				+checkbox('Полоска')
+				+checkbox('Предметы')
+				+checkbox('Птицы')
+				+checkbox('Птички')
+				+checkbox('Пшено')
+				+checkbox('Пятна')
+				+checkbox('Растительные')
+				+checkbox('Сердечки')
+				+checkbox('Спорт')
+				+checkbox('Съедобные')
+				+checkbox('Транспорт')
+				+checkbox('Узор')
+				+checkbox('Фрукты')
+				+checkbox('Цветочки')
+				+checkbox('Цветы')
+				+checkbox('Цепи')
+				+checkbox('Человечки')
+				+checkbox('Штрихи')
+				+checkbox('Ягодки')
+				+checkbox('Ёлочка')
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Жёсткость
+
+			.filter__box-checkbox
+				+checkbox('Очень мягкая')
+				+checkbox('Мягкая')
+				+checkbox('Средняя')
+
+
+		fieldset.filter__fieldset
+			legend.filter__legend Поверхность
+
+			.filter__box-checkbox
+				+checkbox('3D')
+				+checkbox('Бархатистая')
+				+checkbox('Блестящая')
+				+checkbox('Ворсовая')
+				+checkbox('3D')
+				+checkbox('Бархатистая')
+				+checkbox('Блестящая')
+				+checkbox('Ворсовая')
+		
+		.filter__box-btn
+			button(type="submit").btn.filter__btn Применить
+			button(type="reset").btn.filter__btn-light.filter__btn Сбросить все фильтры

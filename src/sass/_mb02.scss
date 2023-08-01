@@ -1,7 +1,7 @@
 .mb02 {
 	display: none;
 
-	@media screen and (max-width: $b_480px) {
+	@media screen and (max-width: $b480) {
 		display: block;
 	}
 }

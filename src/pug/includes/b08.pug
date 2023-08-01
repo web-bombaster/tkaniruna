@@ -2,10 +2,12 @@
     .b08__container.container
         .b08-box
             .b08-box__left.b08-left
+                a(href="#").b08-left__back
                 h1.b08-left__title Бархат
-                .b08-left__count 18 товаров
+                .b08-left__count 18 
+                    span товаров
             .b08-box__right.b08-right
-                | Сортировать
+                span Сортировать
                 .options-type.options-type__b08-right
                     .options-type__current
                         //- .subtitle Тип подоконника
@@ -16,3 +18,5 @@
                         .variants-item Сначала новинки
                         .variants-item По цене (сначала дешёвые)
                         .variants-item По цене (сначала дорогие)
+                button.b08-right__filter.active.jsFilterToggle
+                //- button.b08-right__filter

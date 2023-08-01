@@ -4,7 +4,7 @@
     padding-top: 42px;
     padding-bottom: 73px;
 
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         padding-top: 32px;
         padding-bottom: 32px;
     }
@@ -17,11 +17,11 @@
     width: 100%;
     z-index: 1;
 
-    @media screen and (max-width: $b_1200px) {
+    @media screen and (max-width: $b1200) {
         width: 100%;
     }
 
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         position: relative;
         // left: -32px;
         // right: -32px;
@@ -52,11 +52,11 @@
     border-radius: var(--brs);
     overflow: hidden;
 
-    @media screen and (max-width: $b_1200px) {
+    @media screen and (max-width: $b1200) {
         left: 15px;
     }
 
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         display: flex;
         flex-direction: column;
         padding: 0 32px;
@@ -64,7 +64,7 @@
         left: 0;
     }
 
-    @media screen and (max-width: $b_480px) {
+    @media screen and (max-width: $b480) {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -82,7 +82,7 @@
     @include grey700;
     @include text_2;
 
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         @include text_14_mob;
         text-align: center;
     }
@@ -118,7 +118,7 @@
     @include grey700;
     @include text;
 
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         margin-bottom: 27px;
     }
 }
@@ -127,7 +127,7 @@
     width: 100%;
 }
 .b07__btn {
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         margin-left: auto;
         margin-right: auto;
     }

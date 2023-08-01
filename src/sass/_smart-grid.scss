@@ -4,12 +4,12 @@ $columns: 12;
 // $atom: (math.div(100%, $columns));
 $atom: math.div(100%, $columns);
 
-$b_1200px: 1200px;
-$b_992px: 992px;
-$b_800px: 800px;
-$b_768px: 768px;
-$b_480px: 480px;
-$b_330px: 330px;
+$b1200: 1200px;
+$b992: 992px;
+$b800: 800px;
+$b768: 768px;
+$b480: 480px;
+$b330: 330px;
 
 $offset: 30px;
 $offset_lg: $offset;
@@ -570,73 +570,73 @@ padding-right: #{calc(#{$val}+#{$offset_one_side})
 }
 
 @mixin lg($name, $value) {
-	@media screen and (max-width: $b_1200px) {
+	@media screen and (max-width: $b1200) {
 		#{$name}: $value;
 	}
 }
 
 @mixin lg-block() {
-	@media screen and (max-width: $b_1200px) {
+	@media screen and (max-width: $b1200) {
 		@content;
 	}
 }
 
 @mixin md($name, $value) {
-	@media screen and (max-width: $b_992px) {
+	@media screen and (max-width: $b992) {
 		#{$name}: $value;
 	}
 }
 
 @mixin md-block() {
-	@media screen and (max-width: $b_992px) {
+	@media screen and (max-width: $b992) {
 		@content;
 	}
 }
 
 @mixin ssm($name, $value) {
-	@media screen and (max-width: $b_800px) {
+	@media screen and (max-width: $b800) {
 		#{$name}: $value;
 	}
 }
 
 @mixin ssm-block() {
-	@media screen and (max-width: $b_800px) {
+	@media screen and (max-width: $b800) {
 		@content;
 	}
 }
 
 @mixin sm($name, $value) {
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		#{$name}: $value;
 	}
 }
 
 @mixin sm-block() {
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		@content;
 	}
 }
 
 @mixin xs($name, $value) {
-	@media screen and (max-width: $b_480px) {
+	@media screen and (max-width: $b480) {
 		#{$name}: $value;
 	}
 }
 
 @mixin xs-block() {
-	@media screen and (max-width: $b_480px) {
+	@media screen and (max-width: $b480) {
 		@content;
 	}
 }
 
 @mixin xxs($name, $value) {
-	@media screen and (max-width: $b_330px) {
+	@media screen and (max-width: $b330) {
 		#{$name}: $value;
 	}
 }
 
 @mixin xxs-block() {
-	@media screen and (max-width: $b_330px) {
+	@media screen and (max-width: $b330) {
 		@content;
 	}
 }

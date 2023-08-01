@@ -4,7 +4,7 @@
 
     // position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 18;
     width: 100%;
     background-color: #fff;
 
@@ -14,7 +14,7 @@
     }
 
     &.b-indent {
-        @media screen and (max-width: $b_1024px) {
+        @media screen and (max-width: $b1024) {
             margin-bottom: 0;
         }
     }
@@ -24,7 +24,7 @@
     padding-left: 0;
     padding-right: 0;
 
-    @media screen and (max-width: $b_480px) {
+    @media screen and (max-width: $b480) {
         padding-left: 0;
         padding-right: 0;
     }
@@ -95,7 +95,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
 
-    @media screen and (max-width: $b_1024px) {
+    @media screen and (max-width: $b1024) {
         padding-top: 6px;
         padding-bottom: 6px;
     }

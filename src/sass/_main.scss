@@ -2,6 +2,31 @@
 
 @use "sass:math";
 
+/* ===== Custom Scrollbar CSS ===== */
+
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--grey900) var(--grey000);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--grey900);
+	border-radius: 10px;
+	border: 3px solid var(--grey000);
+}
+
+/* ===== End Custom Scrollbar CSS ===== */
+
 *,
 *:before,
 *:after {
@@ -43,7 +68,7 @@ body {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 
-	@media screen and (max-width: $b_1024px) {
+	@media screen and (max-width: $b1024) {
 		padding-top: 52px;
 	}
 
@@ -91,7 +116,7 @@ body {
 
 .b-top__readmore {
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		display: inline-flex;
 		padding: 10px 24px;
 	
@@ -118,11 +143,11 @@ body {
     @include h2;
 	@include grey900;
 
-	@media screen and (max-width: $b_992px) {
+	@media screen and (max-width: $b992) {
 		font-size: 36px;
 	}
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		flex-grow: 1;
 		text-align: center;
 		max-width: none;
@@ -134,7 +159,7 @@ body {
     @include text;
     color: #545454;
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		@include text_mob;
 	}
 }
@@ -142,7 +167,7 @@ body {
 .b-indent {
     margin-bottom: 48px;
 
-    @media screen and (max-width: $b_768px) {
+    @media screen and (max-width: $b768) {
         margin-bottom: 32px;
     }
 }
@@ -216,11 +241,11 @@ ul:not([class]) {
 	font-weight: 600;
 	text-transform: uppercase;
 
-	@media screen and (max-width: $b_992px) {
+	@media screen and (max-width: $b992) {
 		font-size: 2.6rem;
 	}
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		font-size: 2.2rem;
 	}
 }
@@ -232,11 +257,11 @@ ul:not([class]) {
 	line-height: 1.16;
 	font-weight: 600;
 
-	@media screen and (max-width: $b_1200px) {
+	@media screen and (max-width: $b1200) {
 		font-size: 2rem;
 	}
 
-	@media screen and (max-width: $b_992px) {
+	@media screen and (max-width: $b992) {
 		font-size: 1.8rem;
 	}
 }
@@ -254,7 +279,7 @@ h3:not([class]) {
 }
 
 .hidden-text {
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		display: none;
 
 		&.active {
@@ -280,7 +305,7 @@ h3:not([class]) {
 	border: none;
 	background-color: transparent;
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		display: inline-block;
 	}
 }
@@ -311,7 +336,7 @@ h3:not([class]) {
 		background-color: var(--grey200);
 	}
 
-	@media screen and (max-width: $b_768px) {
+	@media screen and (max-width: $b768) {
 		display: none;
 		height: 3.2rem;
 		width: 3.2rem;
@@ -363,5 +388,13 @@ h3:not([class]) {
 	.index a {
 		text-decoration: underline;
 		color: #06c;
+	}
+}
+
+.mobile {
+	display: none;
+
+	@media screen and (max-width: $b768) {
+		display: block;
 	}
 }

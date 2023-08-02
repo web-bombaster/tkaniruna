@@ -19,6 +19,7 @@ initClassToggleItem('.options-type__variants', '.variants-item'); // выпад�
 initClassToggleItem('.header-bottom-menu', '.menu-hb'); // выпадашка для выбора меню в .header-bottom
 
 
+
 // Табы. Параметры: класс для кнопок табов и класс содержимого табов
 const tabsToggle = function(tabBtnClass, tabContentClass) {
 

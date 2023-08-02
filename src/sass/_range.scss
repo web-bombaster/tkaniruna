@@ -13,9 +13,35 @@
 .filter__input-text {
 }
 .range__input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    @include text_2;
+
     width: calc(50% - 10px / 2);
+
+    input {
+        width: calc(100% - 20px);
+    }
 }
 .range__input--min {
+    position: relative;
+
+    &::before {
+        content: 'от';
+        position: absolute;
+        left: 0px;
+        top: -20px;
+        
+        // width: 10px;
+        // height: 10px;
+        
+        // transform: translateY(-50%);
+        
+        // background-image: url('../img/');
+        // background-size: cover;
+    }
 }
 .range__input--max {
 

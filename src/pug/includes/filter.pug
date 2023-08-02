@@ -18,10 +18,16 @@ mixin checkboximg(title, src)
 		
 		fieldset.filter__fieldset
 			legend.filter__legend Цена
+			
 			.range
 				.range__values
-					input.filter__input-text.range__input.range__input--min(type="text" data-value="322" placeholder="от 322")
-					input.filter__input-text.range__input.range__input--max(type="text" data-value="4300" placeholder="до 4300")
+					.range__input
+						| от
+						input.filter__input-text.range__input--min(type="text" data-value="322" placeholder="от 322")
+					.range__input
+						| до
+						input.filter__input-text.range__input--max(type="text" data-value="4300" placeholder="до 4300")
+				
 				.range__slider-wrapper
 					.range__slider
 

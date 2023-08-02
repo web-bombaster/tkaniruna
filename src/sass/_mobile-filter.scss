@@ -24,4 +24,59 @@
         min-height: 100vh;
         overflow-y: auto;
     }
+
+    .filter__fieldset {
+        margin-bottom: 0;
+        padding-top: 15px;
+        border-bottom: 1px solid var(--grey300);
+
+        &:first-of-type {
+            border-top: 1px solid var(--grey300);
+        }
+
+        .filter__box-checkbox, .range {
+            display: none;
+        }
+
+        &.toggle, &.active {
+            .filter__box-checkbox, .range {
+                display: block;
+            }
+        }
+    }
+
+    .filter__legend {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        margin-bottom: -5px;
+        padding-top: 10px;
+        padding-right: 32px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 13px;
+            
+            width: 24px;
+            height: 24px;
+
+            transform: rotate(-90deg);
+            
+            // transform: translateY(-50%);
+            
+            background-image: url('../img/icons/arrow-down.svg');
+            background-size: cover;
+        }
+
+        &.toggle {
+            &::after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+
 }

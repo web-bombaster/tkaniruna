@@ -50,7 +50,7 @@ function rangeSliderInit(element) { // создаем функцию иници�
 };
 
 // для всех слайдеров цен запускаем функцию инициализации
-function rangeSlidersSearch() {
+function runRangeSliderInit() {
     if (document.querySelector('.range__slider')) {
         const ranges = document.querySelectorAll('.range__slider');
 
@@ -60,4 +60,4 @@ function rangeSlidersSearch() {
     };
 };
 
-rangeSlidersSearch();
+runRangeSliderInit();

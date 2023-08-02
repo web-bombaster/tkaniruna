@@ -42,9 +42,14 @@ let mobileFilterToggle = function() {
 
             checkboxListToggle(); // По щелчку на кнопку Показать все / Свернуть показываем или скрываем лишние чекбоксы в фильтре
 
-            rangeSlidersSearch();
+            elementToggle('.mobile-filter .filter__fieldset'); // по клику открывать 
+
+            runRangeSliderInit();
         };
         menuBtn.addEventListener("click", filterClone);
+
+
+
 
     };
 };

@@ -94,6 +94,11 @@
 
 	@include text_2;
 
+	@media screen and (max-width: $b1024) {
+		align-items: center;
+		gap: 16px;
+	}
+
 	@media screen and (max-width: $b768) {
 		width: 100%;
 		padding: 7px 30px 0;
@@ -183,7 +188,7 @@
 	background-size: cover;
 	cursor: pointer;
 
-	@media screen and (max-width: $b768) {
+	@media screen and (max-width: $b1024) {
 		display: block;
 	}
 

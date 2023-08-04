@@ -54,6 +54,8 @@
         padding-top: 10px;
         padding-right: 32px;
 
+        font-size: 16px;
+
         &::after {
             content: '';
             position: absolute;
@@ -78,5 +80,14 @@
         }
     }
 
+    .filter__btn-reset {
+        margin-bottom: 4px;
+        @include grey700;
+    }
+}
 
+.mobile-filter__title {
+    margin-bottom: 8px;
+
+    @include h3_mob;
 }

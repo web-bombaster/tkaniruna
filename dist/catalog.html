@@ -335,8 +335,12 @@
                   <legend class="filter__legend">Цена</legend>
                   <div class="range">
                     <div class="range__values">
-                      <input class="filter__input-text range__input range__input--min" type="text" data-value="322" placeholder="от 322">
-                      <input class="filter__input-text range__input range__input--max" type="text" data-value="4300" placeholder="до 4300">
+                      <div class="range__input">от
+                        <input class="filter__input-text range__input--min" type="text" data-value="322" placeholder="от 322">
+                      </div>
+                      <div class="range__input">до
+                        <input class="filter__input-text range__input--max" type="text" data-value="4300" placeholder="до 4300">
+                      </div>
                     </div>
                     <div class="range__slider-wrapper">
                       <div class="range__slider"></div>
@@ -875,7 +879,10 @@
         <div class="b07-box">
           <div class="b07__title b-title">Контакты</div>
           <div class="b07__descr-box">
-            <div class="b07__descr b-descr">Наши склады, шоурумы и магазины расположены в Ростове-на-Дону и Москве. По любым вопросам вы можете обращаться по телефону <a href="tel:+78002503255">8 (800) 250-32-55</a></div>
+            <div class="b07__descr b-descr"> 
+              <p>Наши склады, шоурумы и магазины расположены в Ростове-на-Дону и Москве. </p>
+              <p>По любым вопросам вы можете обращаться по телефону <a href="tel:+78002503255">8 (800) 250-32-55</a></p>
+            </div>
           </div>
           <div class="b07__adr">г. Москва, Большая Переяславская, 7/1</div>
           <div class="b07__work">пн-сб 10:00-20:00 <br> вс 11:00-19:00</div>
@@ -1146,7 +1153,9 @@
           </div>
         </div>
       </div>
-      <div class="mobile-filter"></div>
+      <div class="mobile-filter">
+        <div class="mobile-filter__title">Фильтр</div>
+      </div>
       <ul class="tabbar">
         <li class="tabbar__item"><a class="tabbar__link tabbar__link--active" href="#"><img class="tabbar__icon" src="img/icons/tabbar/01.svg" alt="">Главная</a></li>
         <li class="tabbar__item"><a class="tabbar__link" href="#"><img class="tabbar__icon" src="img/icons/tabbar/02.svg" alt="">Каталог</a></li>

@@ -1,3 +1,11 @@
+// Функция, определяющая элемент, по которому был сделан клик
+function targetElement(e) {
+	const targetElement = e.target;
+	console.log(targetElement);
+}
+
+// document.addEventListener("click", targetElement);
+
 // раздаем классы toggle первым элементам внутри родительских, предварительно почистив их у других элементов
 let initClassToggleItem = function(parentElement, childElement) {
     if (document.querySelector(parentElement)) {
@@ -89,6 +97,17 @@ classToggler('.catalog-menu__btn', '.panel-menu');
 classToggler('.jsMobileMenuBtnToggle', '.body');
 classToggler('.jsFilterToggle', '.body');
 classToggler('.jsFilterToggle', '.mobile-filter');
+
+
+// Переключатель класса toggle у следующего элемента по клику на текущем элементе. Параметры - класс элемента по которому кликаем в виде document.querySelector('.b08-left__title') или это должен быть уже ранее выбранный элемент
+let classTogglerNextElement = function(element) {
+    if (element) {
+        element.addEventListener('click', function () {            
+            element.classList.toggle('toggle');
+            element.parentElement.classList.toggle('toggle');
+        });
+    };
+};
 
 
 // по клику на элемент у всех подобных убираем .toggle, а у выбранного добавляем его

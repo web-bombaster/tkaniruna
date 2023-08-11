@@ -3,8 +3,12 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'index';
+- var pageType = 'catalog';
 
+
+//- tovar - страница товара
+if pageType === 'tovar'
+	include tovar
 
 //- catalog - страница каталога
 if pageType === 'catalog'

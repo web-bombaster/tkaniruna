@@ -1,0 +1,36 @@
+include ../includes/mixins
+
+doctype html
+html(lang="ru-RU")
+    include ../includes/head
+    body.body
+        .wrapper
+            include ../includes/preloader
+            include ../includes/header
+            include ../includes/breadcrumbs
+            include ../includes/product
+            //- main.main
+                include ../includes/b08
+                .catalog
+                    .catalog__container.container
+                        include ../includes/filter
+                        .catalog__content
+                            include ../includes/catalog-list-products
+
+            include ../includes/s_etim_tovarom_pokupayut
+            include ../includes/furnitura_k_vybrannoj_tkani
+            include ../includes/b06
+            include ../includes/b05-mobile
+            include ../includes/b07
+            include ../includes/footer
+            include ../includes/mobile-menu
+            include ../includes/mobile-filter
+            include ../includes/tabbar
+
+
+
+
+//- Комментарии
+//- Вопрос по слайдеру
+//- В мобильном меню мливаются пункты третьего уровня со вторым
+//- Таббар сливается с блоками с темным фоном

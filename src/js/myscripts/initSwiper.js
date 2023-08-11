@@ -35,6 +35,8 @@ function initSwiper() {
 	// Применяем конструктор к нужным классам
 	makeSwiper(".jsProductSlider");
 	makeSwiper(".jsProductSliderSale");
+	makeSwiper(".jsRecommendSlider");
+	makeSwiper(".jsFurnituraSlider");
 
 	// Мини слайдер товаров 
 	if (document.querySelector('.jsProductSliderMini')) {

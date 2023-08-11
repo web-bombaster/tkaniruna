@@ -398,3 +398,9 @@ h3:not([class]) {
 		display: block;
 	}
 }
+
+.mobile-hidden {
+    @media screen and (max-width: $b768) {
+        display: none;
+    }
+}

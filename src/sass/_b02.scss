@@ -1,4 +1,7 @@
 .b02 {
+    .b-title {
+        max-width: initial;
+    }
 }
 .b02__container {
 }
@@ -6,18 +9,13 @@
 }
 .b02__top {
 }
-.b04__title {
+.b02__title {
+    margin-bottom: 24px;
 }
-.b-title {
-}
+
 .b02__slider {
     position: relative;
 }
 .b02-bottom {
 }
 
-.buyers-choice {
-    @media screen and (max-width: $b768) {
-        display: none;
-    }
-}

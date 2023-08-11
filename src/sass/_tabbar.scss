@@ -1,4 +1,6 @@
 .tabbar {
+    display: none;
+    
     padding-top: 4px;
     padding-bottom: 4px;
 
@@ -9,11 +11,14 @@
     z-index: 99;
     background-color: var(--grey900);
 
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
+    
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
+    
+    @media screen and (max-width: $b768) {
+        display: grid;        
+    }
 }
 .tabbar__item {
     text-align: center;
